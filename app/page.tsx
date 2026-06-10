@@ -6,7 +6,7 @@ export default function Home() {
     <main className="min-h-dvh w-full">
       <Container>
         <Section as="div" padding="medium">
-          <h1 className="text-4xl font-bold text-copper-400 font-serif">
+          <h1 className="text-4xl font-bold text-linen-500 font-serif">
             Plan
             <br />
             <span className="font-normal italic">with</span> Bijan

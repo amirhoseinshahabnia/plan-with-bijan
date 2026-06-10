@@ -45,6 +45,17 @@
   --gray-800: hsl(209 12% 28%);
   --gray-900: hsl(209 13% 18%);
 
+  /* Linen: #D4C1A0 anchored at 500 */
+  --linen-100: hsl(38 38% 96%);
+  --linen-200: hsl(38 39% 90%);
+  --linen-300: hsl(38 40% 84%);
+  --linen-400: hsl(38 39% 79%);
+  --linen-500: hsl(38 38% 73%);
+  --linen-600: hsl(38 40% 61%);
+  --linen-700: hsl(38 42% 48%);
+  --linen-800: hsl(38 43% 34%);
+  --linen-900: hsl(38 44% 20%);
+
   --background: var(--slate-900);
 }
 
@@ -90,6 +101,16 @@
   --color-gray-700: var(--gray-700);
   --color-gray-800: var(--gray-800);
   --color-gray-900: var(--gray-900);
+
+  --color-linen-100: var(--linen-100);
+  --color-linen-200: var(--linen-200);
+  --color-linen-300: var(--linen-300);
+  --color-linen-400: var(--linen-400);
+  --color-linen-500: var(--linen-500);
+  --color-linen-600: var(--linen-600);
+  --color-linen-700: var(--linen-700);
+  --color-linen-800: var(--linen-800);
+  --color-linen-900: var(--linen-900);
 
   --font-sans: var(--font-bricolage-grotesque);
   --font-serif: var(--font-playfair-display);
