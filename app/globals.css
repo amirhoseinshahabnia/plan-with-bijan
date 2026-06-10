@@ -57,6 +57,51 @@
   --linen-900: hsl(38 44% 20%);
 
   --background: var(--slate-900);
+
+  /* Type scale — readability tuned (Primer / Tailwind / Material baselines) */
+  --ds-display-lg-size: 3.75rem;
+  --ds-display-lg-line-height: 1.1;
+  --ds-display-lg-font-weight: 700;
+  --ds-display-lg-letter-spacing: -0.025em;
+
+  --ds-display-md-size: 3rem;
+  --ds-display-md-line-height: 1.15;
+  --ds-display-md-font-weight: 700;
+  --ds-display-md-letter-spacing: -0.025em;
+
+  --ds-heading-2xl-size: 2.625rem;
+  --ds-heading-2xl-line-height: 1.175;
+  --ds-heading-2xl-font-weight: 700;
+  --ds-heading-2xl-letter-spacing: -0.025em;
+
+  --ds-heading-xl-size: 2.25rem;
+  --ds-heading-xl-line-height: 1.2;
+  --ds-heading-xl-font-weight: 700;
+  --ds-heading-xl-letter-spacing: -0.025em;
+
+  --ds-heading-lg-size: 1.875rem;
+  --ds-heading-lg-line-height: 1.3;
+  --ds-heading-lg-font-weight: 600;
+
+  --ds-heading-md-size: 1.5rem;
+  --ds-heading-md-line-height: 1.4;
+  --ds-heading-md-font-weight: 600;
+
+  --ds-heading-sm-size: 1.25rem;
+  --ds-heading-sm-line-height: 1.5;
+  --ds-heading-sm-font-weight: 600;
+
+  --ds-body-lg-size: 1.125rem;
+  --ds-body-lg-line-height: 1.75rem;
+
+  --ds-body-md-size: 1rem;
+  --ds-body-md-line-height: 1.5rem;
+
+  --ds-body-sm-size: 0.875rem;
+  --ds-body-sm-line-height: 1.25rem;
+
+  --ds-caption-size: 0.75rem;
+  --ds-caption-line-height: 1.125rem;
 }
 
 @theme inline {
@@ -114,6 +159,50 @@
 
   --font-sans: var(--font-bricolage-grotesque);
   --font-serif: var(--font-playfair-display);
+
+  --text-ds-display-lg: var(--ds-display-lg-size);
+  --text-ds-display-lg--line-height: var(--ds-display-lg-line-height);
+  --text-ds-display-lg--font-weight: var(--ds-display-lg-font-weight);
+  --text-ds-display-lg--letter-spacing: var(--ds-display-lg-letter-spacing);
+
+  --text-ds-display-md: var(--ds-display-md-size);
+  --text-ds-display-md--line-height: var(--ds-display-md-line-height);
+  --text-ds-display-md--font-weight: var(--ds-display-md-font-weight);
+  --text-ds-display-md--letter-spacing: var(--ds-display-md-letter-spacing);
+
+  --text-ds-heading-2xl: var(--ds-heading-2xl-size);
+  --text-ds-heading-2xl--line-height: var(--ds-heading-2xl-line-height);
+  --text-ds-heading-2xl--font-weight: var(--ds-heading-2xl-font-weight);
+  --text-ds-heading-2xl--letter-spacing: var(--ds-heading-2xl-letter-spacing);
+
+  --text-ds-heading-xl: var(--ds-heading-xl-size);
+  --text-ds-heading-xl--line-height: var(--ds-heading-xl-line-height);
+  --text-ds-heading-xl--font-weight: var(--ds-heading-xl-font-weight);
+  --text-ds-heading-xl--letter-spacing: var(--ds-heading-xl-letter-spacing);
+
+  --text-ds-heading-lg: var(--ds-heading-lg-size);
+  --text-ds-heading-lg--line-height: var(--ds-heading-lg-line-height);
+  --text-ds-heading-lg--font-weight: var(--ds-heading-lg-font-weight);
+
+  --text-ds-heading-md: var(--ds-heading-md-size);
+  --text-ds-heading-md--line-height: var(--ds-heading-md-line-height);
+  --text-ds-heading-md--font-weight: var(--ds-heading-md-font-weight);
+
+  --text-ds-heading-sm: var(--ds-heading-sm-size);
+  --text-ds-heading-sm--line-height: var(--ds-heading-sm-line-height);
+  --text-ds-heading-sm--font-weight: var(--ds-heading-sm-font-weight);
+
+  --text-ds-body-lg: var(--ds-body-lg-size);
+  --text-ds-body-lg--line-height: var(--ds-body-lg-line-height);
+
+  --text-ds-body-md: var(--ds-body-md-size);
+  --text-ds-body-md--line-height: var(--ds-body-md-line-height);
+
+  --text-ds-body-sm: var(--ds-body-sm-size);
+  --text-ds-body-sm--line-height: var(--ds-body-sm-line-height);
+
+  --text-ds-caption: var(--ds-caption-size);
+  --text-ds-caption--line-height: var(--ds-caption-line-height);
 }
 
 body {
