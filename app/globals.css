@@ -1,39 +1,98 @@
 @import "tailwindcss";
 
 :root {
-  /* Primary: logo navy anchored at 700 */
-  --primary-100: hsl(215 23% 96%);
-  --primary-300: hsl(215 33% 82%);
-  --primary-500: hsl(215 46% 58%);
-  --primary-700: hsl(215 50% 23%);
-  --primary-900: hsl(215 53% 14%);
+  /* Slate: #1E2D3B anchored at 900 */
+  --slate-100: hsl(209 30% 92%);
+  --slate-200: hsl(209 32% 86%);
+  --slate-300: hsl(209 33% 79%);
+  --slate-400: hsl(209 31% 69%);
+  --slate-500: hsl(209 28% 58%);
+  --slate-600: hsl(209 29% 47%);
+  --slate-700: hsl(209 31% 35%);
+  --slate-800: hsl(209 32% 26%);
+  --slate-900: hsl(209 33% 17%);
 
-  /* Accent: logo red anchored at 500 */
-  --accent-100: hsl(9 37% 96%);
-  --accent-300: hsl(9 53% 84%);
-  --accent-500: hsl(9 68% 50%);
-  --accent-700: hsl(9 69% 36%);
-  --accent-900: hsl(9 71% 20%);
+  /* Copper: #C4906A anchored at 500 */
+  --copper-100: hsl(25 42% 92%);
+  --copper-200: hsl(25 43% 85%);
+  --copper-300: hsl(25 44% 78%);
+  --copper-400: hsl(25 44% 69%);
+  --copper-500: hsl(25 43% 59%);
+  --copper-600: hsl(25 43% 47%);
+  --copper-700: hsl(25 42% 34%);
+  --copper-800: hsl(25 41% 26%);
+  --copper-900: hsl(25 40% 18%);
 
-  --background: var(--primary-900);
+  /* Sage: #4F6A58 anchored at 700 */
+  --sage-100: hsl(140 32% 92%);
+  --sage-200: hsl(140 31% 85%);
+  --sage-300: hsl(140 30% 78%);
+  --sage-400: hsl(140 26% 67%);
+  --sage-500: hsl(140 22% 55%);
+  --sage-600: hsl(140 19% 46%);
+  --sage-700: hsl(140 15% 36%);
+  --sage-800: hsl(140 22% 26%);
+  --sage-900: hsl(140 28% 16%);
+
+  /* Gray: #E9E9E9 anchored at 100 */
+  --gray-100: hsl(0 0% 91%);
+  --gray-200: hsl(209 6% 85%);
+  --gray-300: hsl(209 8% 78%);
+  --gray-400: hsl(209 9% 68%);
+  --gray-500: hsl(209 10% 58%);
+  --gray-600: hsl(209 11% 48%);
+  --gray-700: hsl(209 12% 38%);
+  --gray-800: hsl(209 12% 28%);
+  --gray-900: hsl(209 13% 18%);
+
+  --background: var(--slate-900);
 }
 
 @theme inline {
   --color-background: var(--background);
 
-  --color-primary-100: var(--primary-100);
-  --color-primary-300: var(--primary-300);
-  --color-primary-500: var(--primary-500);
-  --color-primary-700: var(--primary-700);
-  --color-primary-900: var(--primary-900);
-  --color-accent-100: var(--accent-100);
-  --color-accent-300: var(--accent-300);
-  --color-accent-500: var(--accent-500);
-  --color-accent-700: var(--accent-700);
-  --color-accent-900: var(--accent-900);
+  --color-slate-100: var(--slate-100);
+  --color-slate-200: var(--slate-200);
+  --color-slate-300: var(--slate-300);
+  --color-slate-400: var(--slate-400);
+  --color-slate-500: var(--slate-500);
+  --color-slate-600: var(--slate-600);
+  --color-slate-700: var(--slate-700);
+  --color-slate-800: var(--slate-800);
+  --color-slate-900: var(--slate-900);
 
-  --font-sans: var(--font-be-vietnam-pro);
-  --font-serif: var(--font-tinos);
+  --color-copper-100: var(--copper-100);
+  --color-copper-200: var(--copper-200);
+  --color-copper-300: var(--copper-300);
+  --color-copper-400: var(--copper-400);
+  --color-copper-500: var(--copper-500);
+  --color-copper-600: var(--copper-600);
+  --color-copper-700: var(--copper-700);
+  --color-copper-800: var(--copper-800);
+  --color-copper-900: var(--copper-900);
+
+  --color-sage-100: var(--sage-100);
+  --color-sage-200: var(--sage-200);
+  --color-sage-300: var(--sage-300);
+  --color-sage-400: var(--sage-400);
+  --color-sage-500: var(--sage-500);
+  --color-sage-600: var(--sage-600);
+  --color-sage-700: var(--sage-700);
+  --color-sage-800: var(--sage-800);
+  --color-sage-900: var(--sage-900);
+
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+
+  --font-sans: var(--font-bricolage-grotesque);
+  --font-serif: var(--font-playfair-display);
 }
 
 body {

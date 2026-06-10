@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro, Tinos } from "next/font/google";
+import { Bricolage_Grotesque, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const beVietnamPro = Be_Vietnam_Pro({
+const bricolageGrotesque = Bricolage_Grotesque({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-be-vietnam-pro",
+  variable: "--font-bricolage-grotesque",
 });
 
-const tinos = Tinos({
+const playfairDisplay = Playfair_Display({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-tinos",
+  variable: "--font-playfair-display",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${beVietnamPro.variable} ${tinos.variable} h-full antialiased`}
+      className={`${bricolageGrotesque.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
