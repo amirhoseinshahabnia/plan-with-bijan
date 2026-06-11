@@ -61,35 +61,35 @@
   /* Type scale — readability tuned (Primer / Tailwind / Material baselines) */
   --ds-display-lg-size: 3.75rem;
   --ds-display-lg-line-height: 1.1;
-  --ds-display-lg-font-weight: 700;
+  --ds-display-lg-font-weight: 500;
   --ds-display-lg-letter-spacing: -0.025em;
 
   --ds-display-md-size: 3rem;
   --ds-display-md-line-height: 1.15;
-  --ds-display-md-font-weight: 700;
+  --ds-display-md-font-weight: 500;
   --ds-display-md-letter-spacing: -0.025em;
 
   --ds-heading-2xl-size: 2.625rem;
   --ds-heading-2xl-line-height: 1.175;
-  --ds-heading-2xl-font-weight: 700;
+  --ds-heading-2xl-font-weight: 500;
   --ds-heading-2xl-letter-spacing: -0.025em;
 
   --ds-heading-xl-size: 2.25rem;
   --ds-heading-xl-line-height: 1.2;
-  --ds-heading-xl-font-weight: 700;
+  --ds-heading-xl-font-weight: 500;
   --ds-heading-xl-letter-spacing: -0.025em;
 
   --ds-heading-lg-size: 1.875rem;
   --ds-heading-lg-line-height: 1.3;
-  --ds-heading-lg-font-weight: 600;
+  --ds-heading-lg-font-weight: 500;
 
   --ds-heading-md-size: 1.5rem;
   --ds-heading-md-line-height: 1.4;
-  --ds-heading-md-font-weight: 600;
+  --ds-heading-md-font-weight: 500;
 
   --ds-heading-sm-size: 1.25rem;
   --ds-heading-sm-line-height: 1.5;
-  --ds-heading-sm-font-weight: 600;
+  --ds-heading-sm-font-weight: 500;
 
   --ds-body-lg-size: 1.125rem;
   --ds-body-lg-line-height: 1.75rem;

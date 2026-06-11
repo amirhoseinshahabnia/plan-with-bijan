@@ -22,7 +22,7 @@ export function Footer() {
           <Link
             href="/"
             aria-label="Plan with Bijan home"
-            className="shrink-0 justify-self-center font-serif text-ds-body-md text-gray-600 transition-colors hover:text-gray-400 md:justify-self-start"
+            className="shrink-0 justify-self-center font-serif text-ds-body-md font-medium text-gray-600 transition-colors hover:text-gray-400 md:justify-self-start"
           >
             Plan <span className="italic text-copper-500">with</span> Bijan
           </Link>

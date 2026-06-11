@@ -5,14 +5,14 @@ import { cn } from "@/lib/util";
 
 const buttonVariants = cva(
   [
-    "inline-flex items-center justify-center font-sans font-medium rounded-none cursor-pointer",
+    "inline-flex items-center justify-center font-sans font-medium rounded-none cursor-pointer rounded",
     "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-linen-500",
     "disabled:pointer-events-none disabled:opacity-50",
   ],
   {
     variants: {
       intent: {
-        primary: "bg-linen-500 text-slate-900 hover:bg-linen-400",
+        primary: "bg-copper-500 text-slate-900 hover:bg-copper-400",
         secondary:
           "border border-linen-500 text-linen-500 bg-transparent hover:bg-linen-500/10",
         tertiary:
