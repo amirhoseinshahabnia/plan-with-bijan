@@ -15,12 +15,14 @@ const buttonVariants = cva(
         primary: "bg-linen-500 text-slate-900 hover:bg-linen-400",
         secondary:
           "border border-linen-500 text-linen-500 bg-transparent hover:bg-linen-500/10",
+        tertiary:
+          "relative bg-transparent text-linen-500 transition-colors hover:text-linen-400 after:pointer-events-none after:absolute after:inset-x-0 after:h-px after:origin-left after:scale-x-0 after:bg-linen-400 after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100",
       },
       size: {
-        xs: "h-7 px-3 text-ds-caption",
-        sm: "h-9 px-4 text-ds-body-sm",
-        md: "h-11 px-5 text-ds-body-md",
-        lg: "h-13 px-6 text-ds-body-lg",
+        xs: "text-ds-caption",
+        sm: "text-ds-body-sm",
+        md: "text-ds-body-md",
+        lg: "text-ds-body-lg",
       },
       animation: {
         none: "transition-colors",
@@ -28,6 +30,32 @@ const buttonVariants = cva(
           "transition duration-200 ease-out hover:-translate-y-0.5 active:translate-y-0",
       },
     },
+    compoundVariants: [
+      { intent: ["primary", "secondary"], size: "xs", class: "h-7 px-3" },
+      { intent: ["primary", "secondary"], size: "sm", class: "h-9 px-4" },
+      { intent: ["primary", "secondary"], size: "md", class: "h-11 px-5" },
+      { intent: ["primary", "secondary"], size: "lg", class: "h-13 px-6" },
+      {
+        intent: "tertiary",
+        size: "xs",
+        class: "h-auto min-h-7 px-0 py-1 after:bottom-0",
+      },
+      {
+        intent: "tertiary",
+        size: "sm",
+        class: "h-auto min-h-9 px-0 py-1 after:bottom-0",
+      },
+      {
+        intent: "tertiary",
+        size: "md",
+        class: "h-auto min-h-11 px-0 py-1.5 after:bottom-0",
+      },
+      {
+        intent: "tertiary",
+        size: "lg",
+        class: "h-auto min-h-13 px-0 py-2 after:bottom-0",
+      },
+    ],
     defaultVariants: {
       intent: "primary",
       size: "md",

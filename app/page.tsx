@@ -27,6 +27,7 @@ export default function Home() {
           <div className="mt-6 flex flex-wrap gap-3">
             <Button>Primary action</Button>
             <Button intent="secondary">Secondary</Button>
+            <Button intent="tertiary">Tertiary</Button>
             <Button href="#contact" animation="moveUp">
               Jump to contact
             </Button>
