@@ -16,7 +16,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <Section as="footer" padding="tight" className={cn("bg-navy-900")}>
+    <Section as="footer" padding="tight" className={cn("bg-navy-950")}>
       <Container>
         <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[auto_1fr_auto] md:gap-8">
           <Link

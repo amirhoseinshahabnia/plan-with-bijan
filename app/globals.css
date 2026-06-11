@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Navy: #1E2D3B anchored at 900 */
+  /* Navy: #1E2D3B at 900, #152030 at 950 */
   --navy-100: hsl(209 30% 92%);
   --navy-200: hsl(209 32% 86%);
   --navy-300: hsl(209 33% 79%);
@@ -11,6 +11,7 @@
   --navy-700: hsl(209 31% 35%);
   --navy-800: hsl(209 32% 26%);
   --navy-900: hsl(209 33% 17%);
+  --navy-950: hsl(209 39% 14%);
 
   /* Copper: #C4906A anchored at 500 */
   --copper-100: hsl(25 42% 92%);
@@ -116,6 +117,7 @@
   --color-navy-700: var(--navy-700);
   --color-navy-800: var(--navy-800);
   --color-navy-900: var(--navy-900);
+  --color-navy-950: var(--navy-950);
 
   --color-copper-100: var(--copper-100);
   --color-copper-200: var(--copper-200);
