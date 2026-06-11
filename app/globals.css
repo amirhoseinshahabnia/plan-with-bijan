@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  /* Slate: #1E2D3B anchored at 900 */
-  --slate-100: hsl(209 30% 92%);
-  --slate-200: hsl(209 32% 86%);
-  --slate-300: hsl(209 33% 79%);
-  --slate-400: hsl(209 31% 69%);
-  --slate-500: hsl(209 28% 58%);
-  --slate-600: hsl(209 29% 47%);
-  --slate-700: hsl(209 31% 35%);
-  --slate-800: hsl(209 32% 26%);
-  --slate-900: hsl(209 33% 17%);
+  /* Navy: #1E2D3B anchored at 900 */
+  --navy-100: hsl(209 30% 92%);
+  --navy-200: hsl(209 32% 86%);
+  --navy-300: hsl(209 33% 79%);
+  --navy-400: hsl(209 31% 69%);
+  --navy-500: hsl(209 28% 58%);
+  --navy-600: hsl(209 29% 47%);
+  --navy-700: hsl(209 31% 35%);
+  --navy-800: hsl(209 32% 26%);
+  --navy-900: hsl(209 33% 17%);
 
   /* Copper: #C4906A anchored at 500 */
   --copper-100: hsl(25 42% 92%);
@@ -45,18 +45,18 @@
   --gray-800: hsl(209 12% 28%);
   --gray-900: hsl(209 13% 18%);
 
-  /* Linen: #D4C1A0 anchored at 500 */
-  --linen-100: hsl(38 38% 96%);
-  --linen-200: hsl(38 39% 90%);
-  --linen-300: hsl(38 40% 84%);
-  --linen-400: hsl(38 39% 79%);
-  --linen-500: hsl(38 38% 73%);
-  --linen-600: hsl(38 40% 61%);
-  --linen-700: hsl(38 42% 48%);
-  --linen-800: hsl(38 43% 34%);
-  --linen-900: hsl(38 44% 20%);
+  /* Sand: #D4C1A0 anchored at 500 */
+  --sand-100: hsl(38 38% 96%);
+  --sand-200: hsl(38 39% 90%);
+  --sand-300: hsl(38 40% 84%);
+  --sand-400: hsl(38 39% 79%);
+  --sand-500: hsl(38 38% 73%);
+  --sand-600: hsl(38 40% 61%);
+  --sand-700: hsl(38 42% 48%);
+  --sand-800: hsl(38 43% 34%);
+  --sand-900: hsl(38 44% 20%);
 
-  --background: var(--slate-900);
+  --background: var(--navy-900);
 
   /* Type scale — readability tuned (Primer / Tailwind / Material baselines) */
   --ds-display-lg-size: 3.75rem;
@@ -107,15 +107,15 @@
 @theme inline {
   --color-background: var(--background);
 
-  --color-slate-100: var(--slate-100);
-  --color-slate-200: var(--slate-200);
-  --color-slate-300: var(--slate-300);
-  --color-slate-400: var(--slate-400);
-  --color-slate-500: var(--slate-500);
-  --color-slate-600: var(--slate-600);
-  --color-slate-700: var(--slate-700);
-  --color-slate-800: var(--slate-800);
-  --color-slate-900: var(--slate-900);
+  --color-navy-100: var(--navy-100);
+  --color-navy-200: var(--navy-200);
+  --color-navy-300: var(--navy-300);
+  --color-navy-400: var(--navy-400);
+  --color-navy-500: var(--navy-500);
+  --color-navy-600: var(--navy-600);
+  --color-navy-700: var(--navy-700);
+  --color-navy-800: var(--navy-800);
+  --color-navy-900: var(--navy-900);
 
   --color-copper-100: var(--copper-100);
   --color-copper-200: var(--copper-200);
@@ -147,15 +147,15 @@
   --color-gray-800: var(--gray-800);
   --color-gray-900: var(--gray-900);
 
-  --color-linen-100: var(--linen-100);
-  --color-linen-200: var(--linen-200);
-  --color-linen-300: var(--linen-300);
-  --color-linen-400: var(--linen-400);
-  --color-linen-500: var(--linen-500);
-  --color-linen-600: var(--linen-600);
-  --color-linen-700: var(--linen-700);
-  --color-linen-800: var(--linen-800);
-  --color-linen-900: var(--linen-900);
+  --color-sand-100: var(--sand-100);
+  --color-sand-200: var(--sand-200);
+  --color-sand-300: var(--sand-300);
+  --color-sand-400: var(--sand-400);
+  --color-sand-500: var(--sand-500);
+  --color-sand-600: var(--sand-600);
+  --color-sand-700: var(--sand-700);
+  --color-sand-800: var(--sand-800);
+  --color-sand-900: var(--sand-900);
 
   --font-sans: var(--font-bricolage-grotesque);
   --font-serif: var(--font-playfair-display);

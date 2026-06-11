@@ -19,7 +19,7 @@ export default function Home() {
                 <br />
                 Your legacy, in order.
               </Heading>
-              <Text variant="body-md" className="text-linen-500 max-w-lg">
+              <Text variant="body-md" className="text-sand-500 max-w-lg">
                 Because the people you love deserve a plan — not a pile of
                 paperwork left behind.
               </Text>

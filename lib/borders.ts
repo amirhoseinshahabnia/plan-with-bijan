@@ -4,38 +4,38 @@ export type BorderSide = "t" | "b" | "l" | "r" | "x" | "y" | "all";
 /** Full class strings so Tailwind can detect them at build time. */
 const BORDER_CLASSES = {
   all: {
-    subtle: "border border-solid border-slate-600/60",
-    accent: "border border-solid border-linen-500/40",
+    subtle: "border border-solid border-navy-600/60",
+    accent: "border border-solid border-sand-500/40",
     strong: "border-2 border-solid border-copper-500",
   },
   t: {
-    subtle: "border-t border-solid border-slate-600/60",
-    accent: "border-t border-solid border-linen-500/40",
+    subtle: "border-t border-solid border-navy-600/60",
+    accent: "border-t border-solid border-sand-500/40",
     strong: "border-t-2 border-solid border-copper-500",
   },
   b: {
-    subtle: "border-b border-solid border-slate-600/60",
-    accent: "border-b border-solid border-linen-500/40",
+    subtle: "border-b border-solid border-navy-600/60",
+    accent: "border-b border-solid border-sand-500/40",
     strong: "border-b-2 border-solid border-copper-500",
   },
   l: {
-    subtle: "border-l border-solid border-slate-600/60",
-    accent: "border-l border-solid border-linen-500/40",
+    subtle: "border-l border-solid border-navy-600/60",
+    accent: "border-l border-solid border-sand-500/40",
     strong: "border-l-2 border-solid border-copper-500",
   },
   r: {
-    subtle: "border-r border-solid border-slate-600/60",
-    accent: "border-r border-solid border-linen-500/40",
+    subtle: "border-r border-solid border-navy-600/60",
+    accent: "border-r border-solid border-sand-500/40",
     strong: "border-r-2 border-solid border-copper-500",
   },
   x: {
-    subtle: "border-x border-solid border-slate-600/60",
-    accent: "border-x border-solid border-linen-500/40",
+    subtle: "border-x border-solid border-navy-600/60",
+    accent: "border-x border-solid border-sand-500/40",
     strong: "border-x-2 border-solid border-copper-500",
   },
   y: {
-    subtle: "border-y border-solid border-slate-600/60",
-    accent: "border-y border-solid border-linen-500/40",
+    subtle: "border-y border-solid border-navy-600/60",
+    accent: "border-y border-solid border-sand-500/40",
     strong: "border-y-2 border-solid border-copper-500",
   },
 } as const satisfies Record<BorderSide, Record<BorderVariant, string>>;

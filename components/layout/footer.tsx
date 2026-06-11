@@ -5,7 +5,7 @@ import { Section } from "@/components/ui/section";
 import { Text } from "@/components/ui/text";
 
 const footerLinkClass =
-  "text-ds-body-sm text-gray-500 transition-colors hover:text-linen-400";
+  "text-ds-body-sm text-gray-500 transition-colors hover:text-sand-400";
 
 const LEGAL_LINKS = [
   { label: "Privacy Policy", href: "#privacy-policy" },
@@ -16,7 +16,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <Section as="footer" padding="tight" className={cn("bg-slate-900")}>
+    <Section as="footer" padding="tight" className={cn("bg-navy-900")}>
       <Container>
         <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[auto_1fr_auto] md:gap-8">
           <Link

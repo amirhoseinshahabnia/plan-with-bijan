@@ -6,17 +6,17 @@ import { cn } from "@/lib/util";
 const buttonVariants = cva(
   [
     "inline-flex items-center justify-center font-sans font-medium rounded-none cursor-pointer rounded",
-    "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-linen-500",
+    "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sand-500",
     "disabled:pointer-events-none disabled:opacity-50",
   ],
   {
     variants: {
       intent: {
-        primary: "bg-copper-500 text-slate-900 hover:bg-copper-400",
+        primary: "bg-copper-500 text-navy-900 hover:bg-copper-400",
         secondary:
-          "border border-linen-500 text-linen-500 bg-transparent hover:bg-linen-500/10",
+          "border border-sand-500 text-sand-500 bg-transparent hover:bg-sand-500/10",
         tertiary:
-          "relative bg-transparent text-linen-500 transition-colors hover:text-linen-400 after:pointer-events-none after:absolute after:inset-x-0 after:h-px after:origin-left after:scale-x-0 after:bg-linen-400 after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100",
+          "relative bg-transparent text-sand-500 transition-colors hover:text-sand-400 after:pointer-events-none after:absolute after:inset-x-0 after:h-px after:origin-left after:scale-x-0 after:bg-sand-400 after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100",
       },
       size: {
         xs: "text-ds-caption",
