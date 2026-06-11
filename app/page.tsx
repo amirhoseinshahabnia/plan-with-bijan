@@ -28,9 +28,6 @@ export default function Home() {
             <Button>Primary action</Button>
             <Button intent="secondary">Secondary</Button>
             <Button intent="tertiary">Tertiary</Button>
-            <Button href="#contact" animation="moveUp">
-              Jump to contact
-            </Button>
             <Button href="https://example.com" openInNewTab>
               External
             </Button>
@@ -41,14 +38,6 @@ export default function Home() {
             <Button size="md">Medium</Button>
             <Button size="lg">Large</Button>
           </div>
-        </Section>
-        <Section as="div" id="contact" padding="large">
-          <Heading as="h2" variant="heading-xl" className="text-linen-500">
-            Contact
-          </Heading>
-          <Text variant="body-md" className="text-gray-300 mt-3 max-w-xl">
-            Anchor target for the button demo.
-          </Text>
         </Section>
       </Container>
     </main>
