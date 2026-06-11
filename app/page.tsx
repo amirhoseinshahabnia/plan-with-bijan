@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
@@ -22,6 +23,30 @@ export default function Home() {
             eveniet quae dolor nihil quo nisi, facilis doloremque ipsam placeat.
             Aperiam illum molestias placeat officia quod reiciendis debitis,
             quaerat at provident obcaecati.
+          </Text>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button>Primary action</Button>
+            <Button intent="secondary">Secondary</Button>
+            <Button href="#contact" animation="moveUp">
+              Jump to contact
+            </Button>
+            <Button href="https://example.com" openInNewTab>
+              External
+            </Button>
+          </div>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Button size="xs">Extra small</Button>
+            <Button size="sm">Small</Button>
+            <Button size="md">Medium</Button>
+            <Button size="lg">Large</Button>
+          </div>
+        </Section>
+        <Section as="div" id="contact" padding="large">
+          <Heading as="h2" variant="heading-xl" className="text-linen-500">
+            Contact
+          </Heading>
+          <Text variant="body-md" className="text-gray-300 mt-3 max-w-xl">
+            Anchor target for the button demo.
           </Text>
         </Section>
       </Container>

@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bricolageGrotesque.variable} ${playfairDisplay.variable} h-full antialiased`}
+      className={`${bricolageGrotesque.variable} ${playfairDisplay.variable} h-full scroll-smooth antialiased motion-reduce:scroll-auto`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
