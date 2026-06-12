@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { CTA } from "@/components/ui/cta";
+import { Quote } from "@/components/ui/quote";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
 import { Text } from "@/components/ui/text";
@@ -32,6 +33,10 @@ export default function Home() {
           </Stack>
         </Section>
       </Container>
+      <Quote
+        quote='"The right plan changes everything — not just for you, but for the people you love most."'
+        person="— BIJAN, ESTATE PLANNING ATTORNEY"
+      />
       <CTA
         title="Ready to protect what matters?"
         subtitle="Book a complimentary strategy session and let's build a plan that works — for you and for those who come after you."
