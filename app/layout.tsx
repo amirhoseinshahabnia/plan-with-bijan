@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Playfair_Display } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
 import "./globals.css";
 
 const bricolageGrotesque = Bricolage_Grotesque({
@@ -33,6 +34,7 @@ export default function RootLayout({
       className={`${bricolageGrotesque.variable} ${playfairDisplay.variable} h-full scroll-smooth antialiased motion-reduce:scroll-auto`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <Header />
         {children}
         <Footer />
       </body>

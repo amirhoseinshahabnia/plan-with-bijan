@@ -59,6 +59,9 @@
 
   --background: var(--navy-900);
 
+  /* Aliased from @theme --breakpoint-wide (900px header nav) */
+  --screen-wide: var(--breakpoint-wide);
+
   /* Type scale — readability tuned (Primer / Tailwind / Material baselines) */
   --ds-display-lg-size: 3.75rem;
   --ds-display-lg-line-height: 1.1;
@@ -161,6 +164,8 @@
 
   --font-sans: var(--font-bricolage-grotesque);
   --font-serif: var(--font-playfair-display);
+
+  --breakpoint-wide: 56.25rem;
 
   --text-ds-display-lg: var(--ds-display-lg-size);
   --text-ds-display-lg--line-height: var(--ds-display-lg-line-height);
