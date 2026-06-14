@@ -37,6 +37,27 @@ export default function Home() {
         quote='"The right plan changes everything — not just for you, but for the people you love most."'
         person="— BIJAN, ESTATE PLANNING ATTORNEY"
       />
+      <Quote
+        quote='"The right plan changes everything — not just for you, but for the people you love most."'
+        person="— BIJAN, ESTATE PLANNING ATTORNEY"
+      />
+      <Quote
+        quote='"The right plan changes everything — not just for you, but for the people you love most."'
+        person="— BIJAN, ESTATE PLANNING ATTORNEY"
+      />
+      <Quote
+        quote='"The right plan changes everything — not just for you, but for the people you love most."'
+        person="— BIJAN, ESTATE PLANNING ATTORNEY"
+      />
+      <Quote
+        quote='"The right plan changes everything — not just for you, but for the people you love most."'
+        person="— BIJAN, ESTATE PLANNING ATTORNEY"
+      />
+      <Quote
+        quote='"The right plan changes everything — not just for you, but for the people you love most."'
+        person="— BIJAN, ESTATE PLANNING ATTORNEY"
+      />
+
       <CTA
         title="Ready to protect what matters?"
         subtitle="Book a complimentary strategy session and let's build a plan that works — for you and for those who come after you."

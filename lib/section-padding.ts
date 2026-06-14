@@ -1,5 +1,6 @@
 export const SECTION_PADDING = {
   none: { y: "py-0", t: "pt-0", b: "pb-0" },
+  minimal: { y: "py-3", t: "pt-3", b: "pb-3" },
   tight: { y: "py-4 md:py-6", t: "pt-4 md:pt-6", b: "pb-4 md:pb-6" },
   compact: { y: "py-8 md:py-12", t: "pt-8 md:pt-12", b: "pb-8 md:pb-12" },
   small: { y: "py-10 md:py-16", t: "pt-10 md:pt-16", b: "pb-10 md:pb-16" },
