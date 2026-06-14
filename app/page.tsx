@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { CTA } from "@/components/ui/cta";
 import { Quote } from "@/components/ui/quote";
+import { REVIEW_QUOTES } from "@/lib/reviews";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
 import { Text } from "@/components/ui/text";
@@ -33,30 +34,7 @@ export default function Home() {
           </Stack>
         </Section>
       </Container>
-      <Quote
-        quote='"The right plan changes everything — not just for you, but for the people you love most."'
-        person="— BIJAN, ESTATE PLANNING ATTORNEY"
-      />
-      <Quote
-        quote='"The right plan changes everything — not just for you, but for the people you love most."'
-        person="— BIJAN, ESTATE PLANNING ATTORNEY"
-      />
-      <Quote
-        quote='"The right plan changes everything — not just for you, but for the people you love most."'
-        person="— BIJAN, ESTATE PLANNING ATTORNEY"
-      />
-      <Quote
-        quote='"The right plan changes everything — not just for you, but for the people you love most."'
-        person="— BIJAN, ESTATE PLANNING ATTORNEY"
-      />
-      <Quote
-        quote='"The right plan changes everything — not just for you, but for the people you love most."'
-        person="— BIJAN, ESTATE PLANNING ATTORNEY"
-      />
-      <Quote
-        quote='"The right plan changes everything — not just for you, but for the people you love most."'
-        person="— BIJAN, ESTATE PLANNING ATTORNEY"
-      />
+      <Quote quotes={REVIEW_QUOTES} />
 
       <CTA
         title="Ready to protect what matters?"
