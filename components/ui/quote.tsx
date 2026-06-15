@@ -26,7 +26,10 @@ export function Quote({ id, quote: { quote, person }, className }: QuoteProps) {
       className={cn("bg-sand-100", borderClass("strong", "b"), className)}
     >
       <Container containerWidth="narrow">
-        <Stack spacing={10} className="items-start md:items-center md:text-center">
+        <Stack
+          spacing={10}
+          className="items-start md:items-center md:text-center"
+        >
           <blockquote className="w-full">
             <Heading
               as="h3"

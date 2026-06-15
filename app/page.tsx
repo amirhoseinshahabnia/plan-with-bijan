@@ -5,6 +5,7 @@ import { EstatePlanningDoneRight } from "@/components/ui/estate-planning-done-ri
 import { Features } from "@/components/ui/features";
 import { WhoWeServe } from "@/components/ui/who-we-serve";
 import { Quote } from "@/components/ui/quote";
+import { Testimonials } from "@/components/ui/testimonials";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
 import { Text } from "@/components/ui/text";
@@ -39,6 +40,7 @@ export default function Home() {
       <Features />
       <WhoWeServe />
       <EstatePlanningDoneRight />
+      <Testimonials />
       <Quote
         quote={{
           person: "BIJAN - KAISER LAW GROUP",
