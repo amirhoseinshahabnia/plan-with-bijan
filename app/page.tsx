@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { CTA } from "@/components/ui/cta";
 import { EstatePlanningDoneRight } from "@/components/ui/estate-planning-done-right";
+import { OurApproach } from "@/components/ui/our-approach";
 import { Features } from "@/components/ui/features";
 import { WhoWeServe } from "@/components/ui/who-we-serve";
 import { Quote } from "@/components/ui/quote";
@@ -40,6 +41,7 @@ export default function Home() {
       <Features />
       <WhoWeServe />
       <EstatePlanningDoneRight />
+      <OurApproach />
       <Testimonials />
       <Quote
         quote={{

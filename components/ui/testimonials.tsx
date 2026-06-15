@@ -67,7 +67,7 @@ export function Testimonials({
       id={id}
       as="section"
       padding="medium"
-      className={cn("bg-gray-50", borderClass("soft", "b"), className)}
+      className={cn("bg-gray-50", borderClass("soft", "y"), className)}
     >
       <Container>
         <Stack spacing={10}>

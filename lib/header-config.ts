@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
   { label: "Who We Serve", href: "#who-we-serve" },
   { label: "Estate Planning Done Right", href: "#estate-planning-done-right" },
-  { label: "Our Approach", href: "#" },
+  { label: "Our Approach", href: "#our-approach" },
 ] as const;
 
 export const CTA_LABEL = "Request a Strategy Session";
