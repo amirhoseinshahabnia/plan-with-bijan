@@ -50,7 +50,7 @@ type EstatePlanningDoneRightProps = {
 export function ProcessCard({ step, title, description }: ProcessCardItem) {
   return (
     <article className={cn("rounded-sm bg-navy-800 p-6")}>
-      <Stack spacing={8}>
+      <Stack spacing={7}>
         <span
           className={cn(
             headingVariantClass("heading-lg"),

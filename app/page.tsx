@@ -40,13 +40,11 @@ export default function Home() {
       <WhoWeServe />
       <EstatePlanningDoneRight />
       <Quote
-        quotes={[
-          {
-            person: "BIJAN - KAISER LAW GROUP",
-            quote:
-              '"The most sophisticated professionals in the world spend decades building wealth — and often hours planning how to protect it. We believe that imbalance is one of the most consequential oversights of our time."',
-          },
-        ]}
+        quote={{
+          person: "BIJAN - KAISER LAW GROUP",
+          quote:
+            '"The most sophisticated professionals in the world spend decades building wealth — and often hours planning how to protect it. We believe that imbalance is one of the most consequential oversights of our time."',
+        }}
       />
 
       <CTA
