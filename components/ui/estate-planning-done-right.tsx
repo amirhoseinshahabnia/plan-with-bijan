@@ -64,7 +64,7 @@ export function ProcessCard({ step, title, description }: ProcessCardItem) {
           <Heading as="h3" variant="heading-sm" className="text-gray-50">
             {title}
           </Heading>
-          <Text variant="body-sm" className="text-navy-300">
+          <Text variant="body-sm" className="text-gray-300">
             {description}
           </Text>
         </Stack>
