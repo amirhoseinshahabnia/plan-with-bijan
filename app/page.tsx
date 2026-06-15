@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { CTA } from "@/components/ui/cta";
+import { EstatePlanningDoneRight } from "@/components/ui/estate-planning-done-right";
 import { Features } from "@/components/ui/features";
 import { WhoWeServe } from "@/components/ui/who-we-serve";
 import { Quote } from "@/components/ui/quote";
@@ -16,7 +17,7 @@ export default function Home() {
         <Section as="div" padding="medium">
           <Stack spacing={7}>
             <Stack spacing={5}>
-              <Heading as="h1" variant="heading-2xl" className="text-gray-100">
+              <Heading as="h1" variant="heading-2xl" className="text-gray-50">
                 Your family.
                 <br />
                 <span className="italic text-copper-500">Protected</span>
@@ -37,6 +38,7 @@ export default function Home() {
       </Container>
       <Features />
       <WhoWeServe />
+      <EstatePlanningDoneRight />
       <Quote
         quotes={[
           {
