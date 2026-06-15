@@ -162,9 +162,10 @@ export function OurApproach({
     if (dotCenters.some((center) => center === null)) return;
 
     const centers = dotCenters as number[];
+    const firstDot = centers[0];
     const lastDot = centers[centers.length - 1] ?? listRect.height;
 
-    setProgressHeight(Math.min(lastDot, Math.max(0, scrollY)));
+    setProgressHeight(Math.min(lastDot, Math.max(firstDot, scrollY)));
 
     let passedIndex = -1;
     centers.forEach((center, index) => {
