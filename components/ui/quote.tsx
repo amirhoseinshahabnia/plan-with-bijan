@@ -180,8 +180,8 @@ export function Quote({
                     <blockquote>
                       <Heading
                         as="h3"
-                        variant="heading-xl"
-                        className="text-ds-heading-lg font-normal italic text-navy-900 wide:text-ds-heading-xl"
+                        variant="heading-lg"
+                        className="font-normal italic text-navy-900"
                       >
                         {quote}
                       </Heading>

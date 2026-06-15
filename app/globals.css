@@ -215,3 +215,18 @@
 body {
   background: var(--background);
 }
+
+@keyframes trust-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.trust-marquee-track {
+  animation: trust-marquee 35s linear infinite;
+  width: max-content;
+}

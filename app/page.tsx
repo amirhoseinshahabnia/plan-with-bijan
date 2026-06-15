@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { CTA } from "@/components/ui/cta";
+import { Features } from "@/components/ui/features";
 import { Quote } from "@/components/ui/quote";
-import { REVIEW_QUOTES } from "@/lib/reviews";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
 import { Text } from "@/components/ui/text";
@@ -34,7 +34,16 @@ export default function Home() {
           </Stack>
         </Section>
       </Container>
-      <Quote quotes={REVIEW_QUOTES} />
+      <Features />
+      <Quote
+        quotes={[
+          {
+            person: "BIJAN - KAISER LAW GROUP",
+            quote:
+              "The most sophisticated professionals in the world spend decades building wealth — and often hours planning how to protect it. We believe that imbalance is one of the most consequential oversights of our time.",
+          },
+        ]}
+      />
 
       <CTA
         title="Ready to protect what matters?"
