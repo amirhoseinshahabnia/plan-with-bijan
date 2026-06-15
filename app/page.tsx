@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { CTA } from "@/components/ui/cta";
 import { Features } from "@/components/ui/features";
+import { WhoWeServe } from "@/components/ui/who-we-serve";
 import { Quote } from "@/components/ui/quote";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
@@ -35,6 +36,7 @@ export default function Home() {
         </Section>
       </Container>
       <Features />
+      <WhoWeServe />
       <Quote
         quotes={[
           {

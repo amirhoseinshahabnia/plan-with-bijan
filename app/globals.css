@@ -36,6 +36,7 @@
   --sage-900: hsl(140 28% 16%);
 
   /* Gray: #E9E9E9 anchored at 100 */
+  --gray-50: hsl(0 0% 96%);
   --gray-100: hsl(0 0% 91%);
   --gray-200: hsl(209 6% 85%);
   --gray-300: hsl(209 8% 78%);
@@ -58,6 +59,10 @@
   --sand-900: hsl(38 44% 20%);
 
   --background: var(--navy-900);
+
+  /* Shadows — navy-tinted, low opacity */
+  --ds-shadow-subtle: 0 1px 2px 0 hsl(209 39% 14% / 0.04),
+    0 1px 3px 0 hsl(209 39% 14% / 0.025);
 
   /* Aliased from @theme --breakpoint-wide (900px header nav) */
   --screen-wide: var(--breakpoint-wide);
@@ -142,6 +147,7 @@
   --color-sage-800: var(--sage-800);
   --color-sage-900: var(--sage-900);
 
+  --color-gray-50: var(--gray-50);
   --color-gray-100: var(--gray-100);
   --color-gray-200: var(--gray-200);
   --color-gray-300: var(--gray-300);
@@ -164,6 +170,8 @@
 
   --font-sans: var(--font-bricolage-grotesque);
   --font-serif: var(--font-playfair-display);
+
+  --shadow-subtle: var(--ds-shadow-subtle);
 
   --breakpoint-wide: 56.25rem;
 

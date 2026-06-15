@@ -1,5 +1,5 @@
 export const NAV_LINKS = [
-  { label: "Who We Serve", href: "#" },
+  { label: "Who We Serve", href: "#who-we-serve" },
   { label: "Estate Planning Done Right", href: "#" },
   { label: "Our Approach", href: "#" },
 ] as const;
