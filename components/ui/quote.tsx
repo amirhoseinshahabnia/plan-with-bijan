@@ -176,12 +176,15 @@ export function Quote({
                   style={{ width: slideWidth > 0 ? slideWidth : "100%" }}
                   aria-hidden={slideIndex !== index}
                 >
-                  <Stack spacing={10} className="items-center text-center">
-                    <blockquote>
+                  <Stack
+                    spacing={10}
+                    className="items-start md:items-center md:text-center"
+                  >
+                    <blockquote className="w-full">
                       <Heading
                         as="h3"
                         variant="heading-lg"
-                        className="font-normal italic text-navy-900"
+                        className="font-normal italic text-navy-900 max-md:text-ds-heading-md"
                       >
                         {quote}
                       </Heading>

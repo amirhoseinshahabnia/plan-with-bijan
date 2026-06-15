@@ -40,7 +40,7 @@ export default function Home() {
           {
             person: "BIJAN - KAISER LAW GROUP",
             quote:
-              "The most sophisticated professionals in the world spend decades building wealth — and often hours planning how to protect it. We believe that imbalance is one of the most consequential oversights of our time.",
+              '"The most sophisticated professionals in the world spend decades building wealth — and often hours planning how to protect it. We believe that imbalance is one of the most consequential oversights of our time."',
           },
         ]}
       />
