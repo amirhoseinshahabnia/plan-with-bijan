@@ -104,7 +104,7 @@ export function EstatePlanningDoneRight({
             >
               {title}
             </Heading>
-            <Text variant="body-md" className="max-w-2xl text-sand-500">
+            <Text variant="body-md" className="max-w-2xl text-gray-300">
               {subtitle}
             </Text>
           </Stack>
