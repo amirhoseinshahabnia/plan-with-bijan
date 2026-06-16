@@ -40,7 +40,7 @@ export function HeaderCompactBar() {
           visible ? "translate-y-0" : "-translate-y-full",
         )}
       >
-        <Container className="md:rounded bg-navy-900/90 backdrop-blur-sm">
+        <Container className="bg-navy-900 md:rounded md:bg-navy-900/90 md:backdrop-blur-sm">
           <div
             className={cn(
               sectionPaddingClasses({ padding: "minimal" }),
