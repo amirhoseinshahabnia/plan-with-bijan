@@ -13,8 +13,8 @@ export default function Home() {
     <main className="w-full">
       <Hero />
       <Features />
-      <RightFit />
       <WhoWeServe />
+      <RightFit />
       <EstatePlanningDoneRight />
       <OurApproach />
       <Testimonials />
