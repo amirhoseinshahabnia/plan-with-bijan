@@ -3,6 +3,7 @@ import { EstatePlanningDoneRight } from "@/components/ui/estate-planning-done-ri
 import { Features } from "@/components/ui/features";
 import { Hero } from "@/components/ui/hero";
 import { OurApproach } from "@/components/ui/our-approach";
+import { RightFit } from "@/components/ui/right-fit";
 import { WhoWeServe } from "@/components/ui/who-we-serve";
 import { Quote } from "@/components/ui/quote";
 import { Testimonials } from "@/components/ui/testimonials";
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="w-full">
       <Hero />
       <Features />
+      <RightFit />
       <WhoWeServe />
       <EstatePlanningDoneRight />
       <OurApproach />
