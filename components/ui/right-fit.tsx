@@ -1,4 +1,5 @@
 import { Check, Minus } from "lucide-react";
+import type { ReactNode } from "react";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
@@ -8,9 +9,89 @@ import { borderClass } from "@/lib/borders";
 import { shadowClass } from "@/lib/shadows";
 import { cn } from "@/lib/util";
 
+function FitCheckBullet() {
+  return (
+    <span
+      className="flex size-5 items-center justify-center rounded-full bg-sage-100"
+      aria-hidden="true"
+    >
+      <Check
+        size={11}
+        strokeWidth={2.25}
+        className="text-sage-800"
+        aria-hidden="true"
+      />
+    </span>
+  );
+}
+
+function NotFitDashBullet() {
+  return (
+    <span
+      className="flex size-5 items-center justify-center rounded-full bg-copper-200"
+      aria-hidden="true"
+    >
+      <Minus
+        size={11}
+        strokeWidth={3.25}
+        className="text-copper-600"
+        aria-hidden="true"
+      />
+    </span>
+  );
+}
+
+function DoubleRule({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn("flex w-full flex-col gap-0.25", className)}
+      aria-hidden="true"
+    >
+      <div className="h-px w-full bg-navy-100" />
+      <div className="h-px w-full bg-navy-100" />
+    </div>
+  );
+}
+
+function AndAtLeastOneDivider() {
+  return (
+    <div className="flex items-center gap-3">
+      <DoubleRule className="min-w-0 flex-1" />
+      <Text
+        as="span"
+        variant="caption"
+        className="shrink-0 uppercase tracking-wider text-copper-500"
+      >
+        And at least one:
+      </Text>
+      <DoubleRule className="min-w-0 flex-1" />
+    </div>
+  );
+}
+
+function RightFitListItem({
+  item,
+  Bullet,
+}: {
+  item: string;
+  Bullet: typeof FitCheckBullet;
+}) {
+  return (
+    <li className="flex items-start gap-3">
+      <span className="flex h-5 shrink-0 items-center">
+        <Bullet />
+      </span>
+      <Text as="span" variant="body-sm" className="text-navy-800">
+        {item}
+      </Text>
+    </li>
+  );
+}
+
 export type RightFitColumn = {
-  title: string;
+  title: ReactNode;
   items: readonly string[];
+  atLeastOneItems?: readonly string[];
 };
 
 const DEFAULT_TITLE = "Are We The Right Fit?";
@@ -18,30 +99,35 @@ const DEFAULT_SUBTITLE =
   "We work with a select group of clients. Because the families we serve have worked too hard to settle for anything less than a plan that is done right.";
 
 const DEFAULT_FIT: RightFitColumn = {
-  title: "We ARE a Fit If...",
-  items: [
-    "You are a resident of California",
-    "You have significant assets, real estate or a business to protect",
-    "You have a net worth of $500K or more",
-    "You own multiple properties including out of state",
-    "You have a blended family or complex family dynamics",
-    "You are a business owner who wants your business to survive you",
-    "You have an existing plan that needs to be reviewed and updated",
-    "You are building generational wealth and want a legacy plan",
-    "You are ready to take action",
+  title: (
+    <>
+      We <span className="italic">are</span> a fit if you...
+    </>
+  ),
+  items: ["Live in California", "Have a net worth of $1MM or more"],
+  atLeastOneItems: [
+    "Have minor children",
+    "Own investment or out-of-state properties",
+    "Have a blended or complex family dynamics",
+    "Own a business and want it to survive you",
+    "Are building generational wealth and a legacy",
   ],
 };
 
 const DEFAULT_NOT_FIT: RightFitColumn = {
-  title: "We Are NOT a Fit If...",
+  title: (
+    <>
+      We Are <span className="italic">not</span> a fit if you...
+    </>
+  ),
   items: [
-    "You are NOT a resident of California",
-    "You are looking for the cheapest option",
-    "You want free legal advice over the phone",
-    "You are not ready to be transparent about your assets and wishes",
-    "You want a quick generic document rather than a real plan",
-    "You intend to plan without your spouse",
-    "You believe this can wait",
+    "Live outside of California",
+    "Are looking for the lowest price",
+    "Expect legal advice before booking",
+    "Are not open to sharing details about your assets and wishes",
+    "Want a generic, one-size-fits-all document",
+    "Are not ready to plan alongside your spouse",
+    "Are not ready to take action today",
   ],
 };
 
@@ -52,10 +138,11 @@ type RightFitColumnCardProps = RightFitColumn & {
 export function RightFitColumnCard({
   title,
   items,
+  atLeastOneItems,
   variant,
 }: RightFitColumnCardProps) {
   const isFit = variant === "fit";
-  const Icon = isFit ? Check : Minus;
+  const Bullet = isFit ? FitCheckBullet : NotFitDashBullet;
 
   return (
     <article
@@ -65,42 +152,45 @@ export function RightFitColumnCard({
         shadowClass("subtle"),
       )}
     >
-      <Stack spacing={6} className="h-full">
+      <Stack spacing={8} className="h-full">
         <Stack spacing={4}>
           <div
             className={cn(
               "h-0.5 w-10",
-              isFit ? "bg-copper-500" : "bg-gray-500",
+              isFit ? "bg-copper-500" : "bg-navy-300",
             )}
             aria-hidden="true"
           />
           <Heading
             as="h3"
-            variant="heading-sm"
-            className={cn(
-              "text-navy-900",
-              isFit ? "font-medium" : "font-normal",
-            )}
+            variant="heading-lg"
+            className={cn("text-navy-900 font-normal")}
           >
             {title}
           </Heading>
+          <DoubleRule />
         </Stack>
 
-        <ul className="flex flex-col gap-3.5">
-          {items.map((item) => (
-            <li key={item} className="flex gap-3">
-              <Icon
-                size={16}
-                strokeWidth={1.5}
-                className="mt-0.5 shrink-0 text-navy-400"
-                aria-hidden="true"
-              />
-              <Text as="span" variant="body-sm" className="text-gray-600">
-                {item}
-              </Text>
-            </li>
-          ))}
-        </ul>
+        <Stack spacing={5}>
+          <ul className="flex flex-col gap-5">
+            {items.map((item) => (
+              <RightFitListItem key={item} item={item} Bullet={Bullet} />
+            ))}
+          </ul>
+
+          {atLeastOneItems && atLeastOneItems.length > 0 ? (
+            <>
+              <AndAtLeastOneDivider />
+              <ul className="flex flex-col gap-5">
+                {atLeastOneItems.map((item) => (
+                  <RightFitListItem key={item} item={item} Bullet={Bullet} />
+                ))}
+              </ul>
+            </>
+          ) : null}
+        </Stack>
+
+        <DoubleRule className="mt-auto" />
       </Stack>
     </article>
   );
