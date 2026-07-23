@@ -47,7 +47,7 @@ export function HeaderCompactBar() {
               "flex min-w-0 items-center justify-between gap-2 wide:gap-4",
             )}
           >
-            <BrandLogo className="shrink-0 text-ds-body-lg text-gray-100 hover:text-gray-200" />
+            <BrandLogo className="shrink-0 text-ds-body-lg text-gray-100 hover:text-gray-200 wide:h-8" />
 
             <Button
               href={CTA_HREF}

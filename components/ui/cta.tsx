@@ -33,7 +33,7 @@ export function CTA({
     >
       <Container>
         <Stack spacing={7} className="items-center text-center">
-          <Stack spacing={5} className="items-center">
+          <Stack spacing={5} className="items-center lg:max-w-xl">
             <Heading as="h2" variant="heading-xl" className="text-gray-100">
               {title}
             </Heading>

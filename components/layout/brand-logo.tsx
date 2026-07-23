@@ -1,21 +1,53 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import type { MouseEvent } from "react";
 import { cn } from "@/lib/util";
+
+const LOGO_WIDTH = 201;
+const LOGO_HEIGHT = 95;
 
 type BrandLogoProps = {
   className?: string;
 };
 
 export function BrandLogo({ className }: BrandLogoProps) {
+  const pathname = usePathname();
+
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (pathname !== "/") {
+      return;
+    }
+
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+    });
+  };
+
   return (
     <Link
       href="/"
       aria-label="Plan with Bijan home"
+      onClick={handleClick}
       className={cn(
-        "shrink-0 font-serif text-ds-body-sm nav:text-ds-body-lg font-medium transition-colors wide:text-ds-heading-sm",
+        "block h-8 w-auto max-w-full shrink-0 transition-opacity duration-200 hover:opacity-80 wide:h-10",
         className,
       )}
     >
-      Plan <span className="italic text-copper-500">with</span> Bijan
+      <Image
+        src="/logo-light.png"
+        alt=""
+        width={LOGO_WIDTH}
+        height={LOGO_HEIGHT}
+        priority
+        className="h-full w-auto max-w-full object-contain"
+      />
     </Link>
   );
 }

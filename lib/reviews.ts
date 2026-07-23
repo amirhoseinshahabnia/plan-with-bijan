@@ -13,13 +13,7 @@ export const REVIEWS: Review[] = [
     profession: "Estate Planning Client, California",
     stars: 5,
   },
-  {
-    name: "Liana Cote",
-    review:
-      "I had a great experience working with the team at Abar Law! I would highly recommend them. Everything was seamless and they took great care of me through the process of completing my trust.",
-    profession: "Estate Planning Client, California",
-    stars: 5,
-  },
+
   {
     name: "Jessica Webb",
     review:
@@ -34,13 +28,7 @@ export const REVIEWS: Review[] = [
     profession: "Estate Planning Client, California",
     stars: 5,
   },
-  {
-    name: "Christine Honeybone",
-    review:
-      "We used Abar Law for our estate planning needs. Bijan took the time to explain everything in detail and in a way we could understand. He really cares for his clients, and we appreciate Bijan and Bani for all their help.",
-    profession: "Estate Planning Client, California",
-    stars: 5,
-  },
+
   {
     name: "Michael Torres",
     review:

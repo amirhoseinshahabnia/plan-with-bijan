@@ -14,20 +14,19 @@ export function Hero() {
           <Stack spacing={7}>
             <Stack spacing={5}>
               <Heading as="h1" variant="heading-2xl" className="text-gray-50">
-                Your family.
+                You built it.
                 <br />
-                <span className="italic text-copper-500">Protected</span>
-                <br />
-                Your legacy, in order.
+                Now <span className="italic text-copper-500">protect</span> it.
               </Heading>
               <Text variant="body-md" className="max-w-lg text-sand-500">
-                Because the people you love deserve a plan — not a pile of
-                paperwork left behind.
+                Estate planning done with intention.
+                <br />
+                So the people you love live peacefully ever after.
               </Text>
             </Stack>
             <div className="flex flex-wrap gap-3">
-              <Button>Primary action</Button>
-              <Button intent="secondary">Secondary</Button>
+              <Button>Request a Strategy Session</Button>
+              <Button intent="secondary">Free Estate Planning Checklist</Button>
             </div>
           </Stack>
 

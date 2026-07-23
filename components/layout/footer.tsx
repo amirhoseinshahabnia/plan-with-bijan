@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { BrandLogo } from "@/components/layout/brand-logo";
 import { cn } from "@/lib/util";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -19,13 +19,7 @@ export function Footer() {
     <Section as="footer" padding="tight" className={cn("bg-navy-950")}>
       <Container>
         <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[auto_1fr_auto] md:gap-8">
-          <Link
-            href="/"
-            aria-label="Plan with Bijan home"
-            className="shrink-0 justify-self-center font-serif text-ds-body-md font-medium text-gray-600 transition-colors hover:text-gray-400 md:justify-self-start"
-          >
-            Plan <span className="italic text-copper-500">with</span> Bijan
-          </Link>
+          <BrandLogo className="justify-self-center md:justify-self-start wide:h-8" />
 
           <Text
             variant="body-sm"

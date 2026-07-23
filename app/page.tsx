@@ -20,15 +20,15 @@ export default function Home() {
       <Testimonials />
       <Quote
         quote={{
-          person: "BIJAN - KAISER LAW GROUP",
+          person: "BIJAN ROBOUBI - KAISER LAW GROUP",
           quote:
             '"The most sophisticated professionals in the world spend decades building wealth — and often hours planning how to protect it. We believe that imbalance is one of the most consequential oversights of our time."',
         }}
       />
 
       <CTA
-        title="Ready to protect what matters?"
-        subtitle="Book a complimentary strategy session and let's build a plan that works — for you and for those who come after you."
+        title="Ready to Protect Your Family? Request a Strategy Session."
+        subtitle="We are selective about who we work with because your plan deserves our full attention. If you are serious about protecting your family and everything you have built, fill out the form below. Our team will review your request and if we believe we can truly help you, we will be in touch."
         cta="Book Your Strategy Session"
         link="#book-strategy-session"
       />

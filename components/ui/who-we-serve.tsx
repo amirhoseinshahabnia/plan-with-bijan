@@ -18,9 +18,10 @@ export type ServeCardItem = {
 };
 
 const DEFAULT_EYEBROW = "Who We Serve";
-const DEFAULT_TITLE = "Estate planning done with intention.";
-const DEFAULT_SUBTITLE =
+const DEFAULT_TITLE =
   "Most attorneys hand you documents and call it done. We don't.";
+const DEFAULT_SUBTITLE =
+  "We work with individuals and families who have built something significant and need a plan that reflects that.";
 
 const DEFAULT_CARDS: ServeCardItem[] = [
   {
@@ -107,7 +108,7 @@ export function WhoWeServe({
             >
               {title}
             </Heading>
-            <Text variant="body-md" className="max-w-2xl text-gray-600">
+            <Text variant="body-md" className="text-gray-600">
               {subtitle}
             </Text>
           </Stack>
