@@ -36,9 +36,9 @@ export function TestimonialCard({ name, review, profession }: Review) {
           <Text as="p" variant="body-sm" className="font-medium text-navy-900">
             {name}
           </Text>
-          <Text as="p" variant="caption" className="text-copper-500">
+          {/* <Text as="p" variant="caption" className="text-copper-500">
             {profession}
-          </Text>
+          </Text> */}
         </Stack>
       </Stack>
     </article>

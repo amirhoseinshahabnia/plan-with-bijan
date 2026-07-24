@@ -33,3 +33,6 @@ export function headingVariantClass(variant: HeadingVariant): string {
 export function textVariantClass(variant: TextVariant): string {
   return TEXT_VARIANTS[variant];
 }
+
+export const EYEBROW_TEXT_CLASS =
+  "uppercase tracking-widest text-copper-500";

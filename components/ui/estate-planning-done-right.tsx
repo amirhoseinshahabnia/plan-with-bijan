@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/section";
 import { Stack } from "@/components/ui/stack";
 import { Text } from "@/components/ui/text";
 import { borderClass } from "@/lib/borders";
-import { headingVariantClass } from "@/lib/typography";
+import { headingVariantClass, EYEBROW_TEXT_CLASS } from "@/lib/typography";
 import { cn } from "@/lib/util";
 
 export type ProcessCardItem = {
@@ -93,7 +93,7 @@ export function EstatePlanningDoneRight({
           <Stack spacing={4}>
             <Text
               variant="caption"
-              className="uppercase tracking-wider text-copper-500"
+              className={EYEBROW_TEXT_CLASS}
             >
               {eyebrow}
             </Text>

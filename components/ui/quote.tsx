@@ -3,6 +3,7 @@ import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
 import { Stack } from "@/components/ui/stack";
 import { Text } from "@/components/ui/text";
+import { EYEBROW_TEXT_CLASS } from "@/lib/typography";
 import { borderClass } from "@/lib/borders";
 import { cn } from "@/lib/util";
 
@@ -42,7 +43,7 @@ export function Quote({ id, quote: { quote, person }, className }: QuoteProps) {
           <Text
             as="p"
             variant="body-sm"
-            className="uppercase tracking-wider text-copper-500"
+            className={EYEBROW_TEXT_CLASS}
           >
             {person}
           </Text>

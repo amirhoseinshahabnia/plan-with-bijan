@@ -36,4 +36,18 @@ export const REVIEWS: Review[] = [
     profession: "Estate Planning Client, California",
     stars: 5,
   },
+  {
+    name: "Nima Elie",
+    review:
+      "Our family hired Bijan for our estate planning, and we could not be more impressed. Throughout the entire process, Bijan was extremely thoughtful, kind, and professional. He took the time to ensure we understood every detail, patiently answering every question and keeping us informed at every step. He is a genuinely kind person who makes you feel safe sharing confidential information. I could not recommend his firm highly enough!",
+    profession: "Estate Planning Client, California",
+    stars: 5,
+  },
+  {
+    name: "Ariane Sims",
+    review:
+      "Bijan has a brilliant mind and a heart of gold, and both are apparent in his practice as an estate planning attorney. He cares deeply for his clients and works diligently to ensure that they and their loved ones are protected, no matter what happens. I highly recommend him.",
+    profession: "Estate Planning Client, California",
+    stars: 5,
+  },
 ];

@@ -5,6 +5,7 @@ import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
 import { Stack } from "@/components/ui/stack";
 import { Text } from "@/components/ui/text";
+import { EYEBROW_TEXT_CLASS } from "@/lib/typography";
 
 export function Hero() {
   return (
@@ -13,12 +14,20 @@ export function Hero() {
         <div className="grid grid-cols-1 items-center gap-10 wide:grid-cols-2 wide:gap-12">
           <Stack spacing={7}>
             <Stack spacing={5}>
-              <Heading as="h1" variant="heading-2xl" className="text-gray-50">
-                You built it.
-                <br />
-                Now <span className="italic text-copper-500">protect</span> it.
-              </Heading>
-              <Text variant="body-md" className="max-w-lg text-sand-500">
+              <Stack spacing={4}>
+                <Text variant="caption" className={EYEBROW_TEXT_CLASS}>
+                  For 7 & 8-Figure Families
+                </Text>
+                <Heading as="h1" variant="heading-2xl" className="text-gray-50">
+                  You built it.
+                  <br />
+                  Now <span className="italic text-copper-500">
+                    protect
+                  </span>{" "}
+                  it.
+                </Heading>
+              </Stack>
+              <Text variant="body-md" className="max-w-lg text-gray-300">
                 Estate planning done with intention.
                 <br />
                 So the people you love live peacefully ever after.

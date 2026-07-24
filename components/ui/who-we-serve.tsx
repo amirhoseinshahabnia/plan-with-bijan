@@ -7,6 +7,7 @@ import {
 import { Section } from "@/components/ui/section";
 import { Stack } from "@/components/ui/stack";
 import { Text } from "@/components/ui/text";
+import { EYEBROW_TEXT_CLASS } from "@/lib/typography";
 import { borderClass } from "@/lib/borders";
 import { shadowClass } from "@/lib/shadows";
 import { cn } from "@/lib/util";
@@ -97,7 +98,7 @@ export function WhoWeServe({
           <Stack spacing={4}>
             <Text
               variant="caption"
-              className="uppercase tracking-wider text-copper-500"
+              className={EYEBROW_TEXT_CLASS}
             >
               {eyebrow}
             </Text>

@@ -5,6 +5,7 @@ import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
 import { Stack } from "@/components/ui/stack";
 import { Text } from "@/components/ui/text";
+import { EYEBROW_TEXT_CLASS } from "@/lib/typography";
 import { borderClass } from "@/lib/borders";
 import { shadowClass } from "@/lib/shadows";
 import { cn } from "@/lib/util";
@@ -60,7 +61,7 @@ function AndAtLeastOneDivider() {
       <Text
         as="span"
         variant="caption"
-        className="shrink-0 uppercase tracking-wider text-copper-500"
+        className={cn("shrink-0", EYEBROW_TEXT_CLASS)}
       >
         And at least one:
       </Text>
