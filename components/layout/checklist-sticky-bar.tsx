@@ -114,7 +114,7 @@ export function ChecklistStickyBar() {
             ref={barRef}
             onTransitionEnd={handleTransitionEnd}
             className={cn(
-              "bg-navy-900/90 backdrop-blur-sm transition-transform duration-300 ease-out motion-reduce:transition-none",
+              "bg-navy-900 transition-transform duration-300 ease-out motion-reduce:transition-none",
               shouldShow ? "translate-y-0" : "translate-y-full",
             )}
           >
