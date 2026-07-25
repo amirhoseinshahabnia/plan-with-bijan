@@ -34,8 +34,10 @@ export function Hero() {
               </Text>
             </Stack>
             <div className="flex flex-wrap gap-3">
-              <Button>Request a Strategy Session</Button>
-              <Button intent="secondary">Free Estate Planning Checklist</Button>
+              <Button>Request a Consultation</Button>
+              <Button intent="secondary">
+                Download our Complete Estate Planning Checklist
+              </Button>
             </div>
           </Stack>
 

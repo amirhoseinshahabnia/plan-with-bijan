@@ -13,7 +13,7 @@ const DEFAULT_FEATURES: FeatureItem[] = [
   { label: "Licensed in California" },
   { label: "10+ Years of Experience", marquee: "10+ Years Experience" },
   {
-    label: "Legacy Program — Plans That Stay Current",
+    label: "Legacy Program, Plans That Stay Current",
     marquee: "Legacy Program",
   },
   { label: "Trusted by Business Owners & Executives" },
@@ -42,10 +42,7 @@ function FeaturesMarquee({ items }: { items: readonly FeatureItem[] }) {
           {loopItems.map((item, index) => (
             <Fragment key={`${item.label}-${index}`}>
               {index > 0 && (
-                <span
-                  className="shrink-0 text-sand-600"
-                  aria-hidden="true"
-                >
+                <span className="shrink-0 text-sand-600" aria-hidden="true">
                   •
                 </span>
               )}

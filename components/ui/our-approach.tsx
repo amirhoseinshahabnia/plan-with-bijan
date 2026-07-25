@@ -17,7 +17,7 @@ export type ApproachStepItem = {
 
 const DEFAULT_TITLE = "How we work with you.";
 const DEFAULT_SUBTITLE =
-  "A clear, five-step process — from first conversation to ongoing stewardship.";
+  "A clear process, from first conversation to ongoing relationship.";
 
 const TIMELINE_OFFSET = "1.25rem";
 const SCROLL_TRIGGER_RATIO = 0.42;
@@ -26,27 +26,27 @@ const DEFAULT_STEPS: ApproachStepItem[] = [
   {
     title: "Discovery & Intake",
     description:
-      "Your assets, obligations, family structure, and intentions are captured in full — so everything is in place before we meet.",
+      "Your assets, obligations, family structure, and intentions are captured in full, so everything is in place before we meet.",
   },
   {
     title: "Strategy Session",
     description:
-      "Your plan takes shape around revocable trusts, asset protection, charitable giving, and recommendations specific to your profile.",
+      "We discuss your goals and objectives, and we recommend a plan in accordance with your unique situation and specific wishes.",
   },
   {
-    title: "Document Drafting",
+    title: "Customized Plan",
     description:
-      "Your trust documents, powers of attorney, healthcare directives, and ancillary instruments are drafted to reflect your exact wishes.",
+      "Your trust document, powers of attorney, healthcare directives, and ancillary instruments are custom drafted and signed.",
   },
   {
-    title: "Funding & Execution",
+    title: "Asset Alignment",
     description:
-      "Your trust is only as strong as what's inside it. Every asset is properly funded and accounted for — the most overlooked step in estate planning.",
+      "We work together to align every single asset with your plan. This is the most overlooked step in estate planning.",
   },
   {
-    title: "Ongoing Stewardship",
+    title: "Ongoing Relationship & Advance Planning",
     description:
-      "Your plan stays up to date as your life, your assets, and the laws change — through regular reviews and necessary updates.",
+      "Your plan stays up to date as your life, your assets, and the laws change, and we work on any charitable giving or tax planning, as appropriate.",
   },
 ];
 

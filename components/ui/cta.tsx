@@ -34,10 +34,10 @@ export function CTA({
       <Container>
         <Stack spacing={7} className="items-center text-center">
           <Stack spacing={5} className="items-center lg:max-w-xl">
-            <Heading as="h2" variant="heading-xl" className="text-gray-100">
+            <Heading as="h2" variant="heading-xl" className="text-gray-50">
               {title}
             </Heading>
-            <Text variant="body-md" className="max-w-xl text-sand-500">
+            <Text variant="body-md" className="max-w-xl text-gray-300">
               {subtitle}
             </Text>
           </Stack>

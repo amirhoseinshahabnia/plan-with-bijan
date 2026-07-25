@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Playfair_Display } from "next/font/google";
+import { ChecklistStickyBar } from "@/components/layout/checklist-sticky-bar";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import "./globals.css";
@@ -20,7 +21,7 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: "Plan with Bijan | Estate Planning Attorney",
   description:
-    "Plan with Bijan — California estate planning attorney helping families create wills, trusts, and legacy plans with clarity and care. Protect what matters most.",
+    "Plan with Bijan, California estate planning attorney helping families create wills, trusts, and legacy plans with clarity and care. Protect what matters most.",
 };
 
 export default function RootLayout({
@@ -37,6 +38,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ChecklistStickyBar />
       </body>
     </html>
   );

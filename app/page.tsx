@@ -22,14 +22,14 @@ export default function Home() {
         quote={{
           person: "BIJAN ROBOUBI - KAISER LAW GROUP",
           quote:
-            '"The most sophisticated professionals in the world spend decades building wealth — and often hours planning how to protect it. We believe that imbalance is one of the most consequential oversights of our time."',
+            '"Most people spend 30 to 40 years building their wealth, and only spend 3 to 4 hours planning what happens after they are gone. We help families address this imbalance so they can create generational wealth and leave a lasting legacy."',
         }}
       />
 
       <CTA
-        title="Ready to Protect Your Family? Request a Strategy Session."
+        title="Ready to Protect Your Family? Request a Consultation."
         subtitle="We are selective about who we work with because your plan deserves our full attention. If you are serious about protecting your family and everything you have built, fill out the form below. Our team will review your request and if we believe we can truly help you, we will be in touch."
-        cta="Book Your Strategy Session"
+        cta="Request a Consultation"
         link="#book-strategy-session"
       />
     </main>

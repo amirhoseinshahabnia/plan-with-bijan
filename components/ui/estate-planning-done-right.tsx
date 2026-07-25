@@ -28,7 +28,7 @@ const DEFAULT_CARDS: ProcessCardItem[] = [
     step: "02",
     title: "Custom Legal Documents",
     description:
-      "Every client is different. Your trust, will, powers of attorney, and healthcare directives should reflect your specific situation — not a template pulled from a drawer.",
+      "Every client is different. Your trust, will, powers of attorney, and healthcare directives should reflect your specific situation, not a template pulled from a drawer.",
   },
   {
     step: "03",
@@ -91,10 +91,7 @@ export function EstatePlanningDoneRight({
       <Container>
         <Stack spacing={10}>
           <Stack spacing={4}>
-            <Text
-              variant="caption"
-              className={EYEBROW_TEXT_CLASS}
-            >
+            <Text variant="caption" className={EYEBROW_TEXT_CLASS}>
               {eyebrow}
             </Text>
             <Heading
