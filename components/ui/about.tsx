@@ -17,7 +17,7 @@ export type AboutTimelineItem = {
 const DEFAULT_EYEBROW = "The Attorney";
 const DEFAULT_HEADLINE = "Two careers. One throughline.";
 const DEFAULT_LEDE =
-  "Bijan Roboubi is a Partner at Kaiser Law Group in Long Beach, California. For over a decade, he managed nine-figure construction contracts at the Port of Los Angeles — experience that still shapes how he builds every estate plan: with precision, foresight, and no loose ends.";
+  "Bijan Roboubi is a Partner at Kaiser Law Group in Long Beach, California. For over a decade, he managed nine-figure construction contracts at the Port of Los Angeles, experience that still shapes how he builds every estate plan: with precision, foresight, and no loose ends.";
 
 const DEFAULT_TIMELINE: AboutTimelineItem[] = [
   {
