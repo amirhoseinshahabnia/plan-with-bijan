@@ -13,6 +13,36 @@ import {
 import { sectionPaddingClasses } from "@/lib/section-padding";
 import { cn } from "@/lib/util";
 
+function HeaderCompactBarContent() {
+  return (
+    <>
+      <BrandLogo className="shrink-0 text-ds-body-lg text-gray-100 hover:text-gray-200 wide:h-8" />
+
+      <Button href={CTA_HREF} size="sm" className="hidden wide:inline-flex">
+        {CTA_LABEL}
+      </Button>
+      <Button
+        href={CTA_HREF}
+        size="xs"
+        aria-label={CTA_LABEL}
+        className="min-w-0 shrink px-2.5 wide:hidden"
+      >
+        {MOBILE_CTA_LABEL}
+      </Button>
+    </>
+  );
+}
+
+const barLayoutClass = cn(
+  sectionPaddingClasses({ padding: "minimal" }),
+  "flex min-w-0 items-center justify-between gap-2 wide:gap-4",
+);
+
+const desktopBarClass = cn(
+  "rounded bg-navy-900/90 backdrop-blur-sm px-4",
+  barLayoutClass,
+);
+
 export function HeaderCompactBar() {
   const [visible, setVisible] = useState(false);
 
@@ -36,34 +66,17 @@ export function HeaderCompactBar() {
     >
       <div
         className={cn(
-          "px-0 pt-0 md:px-4 md:pt-4 transition-transform duration-300 ease-out wide:px-6",
+          "pt-0 transition-transform duration-300 ease-out md:px-4 md:pt-4 wide:px-6",
           visible ? "translate-y-0" : "-translate-y-full",
         )}
       >
-        <Container className="bg-navy-900 md:rounded md:bg-navy-900/90 md:backdrop-blur-sm">
-          <div
-            className={cn(
-              sectionPaddingClasses({ padding: "minimal" }),
-              "flex min-w-0 items-center justify-between gap-2 wide:gap-4",
-            )}
-          >
-            <BrandLogo className="shrink-0 text-ds-body-lg text-gray-100 hover:text-gray-200 wide:h-8" />
+        <div className={cn("bg-navy-900 px-4 md:hidden", barLayoutClass)}>
+          <HeaderCompactBarContent />
+        </div>
 
-            <Button
-              href={CTA_HREF}
-              size="sm"
-              className="hidden wide:inline-flex"
-            >
-              {CTA_LABEL}
-            </Button>
-            <Button
-              href={CTA_HREF}
-              size="xs"
-              aria-label={CTA_LABEL}
-              className="min-w-0 shrink px-2.5 wide:hidden"
-            >
-              {MOBILE_CTA_LABEL}
-            </Button>
+        <Container className="hidden md:block">
+          <div className={desktopBarClass}>
+            <HeaderCompactBarContent />
           </div>
         </Container>
       </div>
