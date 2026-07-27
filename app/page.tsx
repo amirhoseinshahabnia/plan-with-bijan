@@ -1,3 +1,4 @@
+import { About } from "@/components/ui/about";
 import { CTA } from "@/components/ui/cta";
 import { EstatePlanningDoneRight } from "@/components/ui/estate-planning-done-right";
 import { Features } from "@/components/ui/features";
@@ -24,6 +25,7 @@ export default function Home() {
       <RightFit />
       <EstatePlanningDoneRight />
       <OurApproach />
+      <About />
       <Testimonials />
       <Quote
         quote={{

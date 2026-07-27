@@ -2,6 +2,7 @@ export const NAV_LINKS = [
   { label: "Who We Serve", href: "#who-we-serve" },
   { label: "Estate Planning Done Right", href: "#estate-planning-done-right" },
   { label: "Our Approach", href: "#our-approach" },
+  { label: "About", href: "#about" },
 ] as const;
 
 export const CTA_LABEL = "Request a Consultation";
