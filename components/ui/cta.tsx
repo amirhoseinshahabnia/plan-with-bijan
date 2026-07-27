@@ -6,6 +6,7 @@ import { Stack } from "@/components/ui/stack";
 import { Text } from "@/components/ui/text";
 import { borderClass } from "@/lib/borders";
 import { cn } from "@/lib/util";
+import { type SectionPadding } from "@/lib/section-padding";
 
 type CTAProps = {
   id?: string;
@@ -14,6 +15,7 @@ type CTAProps = {
   cta: string;
   link: string;
   className?: string;
+  padding?: SectionPadding;
 };
 
 export function CTA({
@@ -23,12 +25,13 @@ export function CTA({
   cta,
   link,
   className,
+  padding = "medium",
 }: CTAProps) {
   return (
     <Section
       id={id}
       as="section"
-      padding="medium"
+      padding={padding}
       className={cn("bg-navy-900", borderClass("strong", "t"), className)}
     >
       <Container>
