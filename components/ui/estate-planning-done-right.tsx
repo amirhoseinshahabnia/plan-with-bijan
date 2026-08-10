@@ -3,7 +3,6 @@ import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
 import { Stack } from "@/components/ui/stack";
 import { Text } from "@/components/ui/text";
-import { borderClass } from "@/lib/borders";
 import { headingVariantClass, EYEBROW_TEXT_CLASS } from "@/lib/typography";
 import { cn } from "@/lib/util";
 
@@ -14,21 +13,21 @@ export type ProcessCardItem = {
 };
 
 const DEFAULT_EYEBROW = "Estate Planning Done Right";
-const DEFAULT_TITLE = "Three steps to peace of mind.";
+const DEFAULT_TITLE = "Three steps to peace of mind:";
 const DEFAULT_SUBTITLE = "Simple, intentional, and built around you.";
 
 const DEFAULT_CARDS: ProcessCardItem[] = [
   {
     step: "01",
-    title: "Asset Alignment",
-    description:
-      "Even a perfectly drafted trust is meaningless if your assets aren't titled correctly. Asset alignment ensures everything you own is structured to flow through your plan the way it's intended.",
-  },
-  {
-    step: "02",
     title: "Custom Legal Documents",
     description:
       "Every client is different. Your trust, will, powers of attorney, and healthcare directives should reflect your specific situation, not a template pulled from a drawer.",
+  },
+  {
+    step: "02",
+    title: "Asset Alignment",
+    description:
+      "Even a perfectly drafted trust is meaningless if your assets aren't titled correctly. Asset alignment ensures everything you own is structured to flow through your plan the way it's intended.",
   },
   {
     step: "03",
@@ -91,9 +90,9 @@ export function EstatePlanningDoneRight({
       <Container>
         <Stack spacing={10}>
           <Stack spacing={4}>
-            <Text variant="caption" className={EYEBROW_TEXT_CLASS}>
+            {/* <Text variant="caption" className={EYEBROW_TEXT_CLASS}>
               {eyebrow}
-            </Text>
+            </Text> */}
             <Heading
               as="h2"
               variant="heading-xl"
@@ -101,9 +100,9 @@ export function EstatePlanningDoneRight({
             >
               {title}
             </Heading>
-            <Text variant="body-md" className="max-w-2xl text-gray-300">
+            {/* <Text variant="body-md" className="max-w-2xl text-gray-300">
               {subtitle}
-            </Text>
+            </Text> */}
           </Stack>
 
           <div className="grid grid-cols-1 gap-6 wide:grid-cols-3 wide:gap-8">

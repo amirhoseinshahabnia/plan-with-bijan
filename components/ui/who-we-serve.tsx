@@ -29,13 +29,13 @@ const DEFAULT_CARDS: ServeCardItem[] = [
     icon: "tech",
     title: "Tech Founders & Executives",
     description:
-      "Equity, options, and company stakes demand planning that's ready for what's coming, an IPO, an acquisition, or simply the wealth you're building toward.",
+      "Equity, options, and company stakes demand planning that's ready for what's coming: an IPO, an acquisition, or simply the wealth you're building toward.",
   },
   {
     icon: "medical",
     title: "Physicians & Dentists",
     description:
-      "The structure of a physician's or dentist's estate requires provisions that go beyond the standard, licensing, practice interests, and professional considerations that most estate plans miss entirely.",
+      "The structure of a physician's or a dentist's estate requires provisions that go beyond the standard: licensing, practice interests, and professional considerations that most estate plans miss entirely.",
   },
   {
     icon: "founder",

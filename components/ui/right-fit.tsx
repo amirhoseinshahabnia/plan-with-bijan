@@ -108,24 +108,24 @@ const DEFAULT_FIT: RightFitColumn = {
   items: ["Live in California", "Have a net worth of $1MM or more"],
   atLeastOneItems: [
     "Have minor children",
-    "Own investment or out-of-state properties",
-    "Have a blended or complex family dynamics",
-    "Own a business and want it to survive you",
-    "Are building generational wealth and a legacy",
+    "Own investment properties",
+    "Have a blended family",
+    "Own a business",
+    "Are building generational wealth",
   ],
 };
 
 const DEFAULT_NOT_FIT: RightFitColumn = {
   title: (
     <>
-      We Are <span className="italic">not</span> a fit if you...
+      We are <span className="italic">not</span> a fit if you...
     </>
   ),
   items: [
     "Live outside of California",
     "Are looking for the lowest price",
     "Expect legal advice before booking",
-    "Are not open to sharing details about your assets and wishes",
+    "Are not open to sharing details about your assets and your wishes",
     "Want a generic, one-size-fits-all document",
     "Are not ready to plan alongside your spouse",
     "Are not ready to take action today",

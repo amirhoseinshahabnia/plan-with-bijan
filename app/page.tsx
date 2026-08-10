@@ -16,8 +16,8 @@ export default function Home() {
       <Features />
       <WhoWeServe />
       <CTA
-        title="Not ready for a consultation yet? Start with the checklist"
-        subtitle="The Complete Estate Planning Checklist: for families who protect what they've built."
+        title="Not ready for a consultation yet? Start with the checklist."
+        subtitle="The Complete Estate Planning Checklist: for families who want to protect what they've built."
         cta="Download the Checklist Now"
         link="#book-strategy-session"
         padding="compact"

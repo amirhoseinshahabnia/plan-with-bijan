@@ -20,7 +20,7 @@ const DEFAULT_SUBTITLE =
   "A clear process, from first conversation to ongoing relationship.";
 
 const TIMELINE_OFFSET = "1.25rem";
-const SCROLL_TRIGGER_RATIO = 0.42;
+const SCROLL_TRIGGER_RATIO = 0.64;
 
 const DEFAULT_STEPS: ApproachStepItem[] = [
   {
@@ -36,7 +36,7 @@ const DEFAULT_STEPS: ApproachStepItem[] = [
   {
     title: "Customized Plan",
     description:
-      "Your trust document, powers of attorney, healthcare directives, and ancillary instruments are custom drafted and signed.",
+      "Your trust document, powers of attorney, healthcare directives, and ancillaries are custom-drafted and signed.",
   },
   {
     title: "Asset Alignment",
@@ -46,7 +46,7 @@ const DEFAULT_STEPS: ApproachStepItem[] = [
   {
     title: "Ongoing Relationship & Advance Planning",
     description:
-      "Your plan stays up to date as your life, your assets, and the laws change, and we work on any charitable giving or tax planning, as appropriate.",
+      "Your plan stays up to date as your life, your assets, and the laws change, and we work on any charitable giving or tax planning, as needed.",
   },
 ];
 

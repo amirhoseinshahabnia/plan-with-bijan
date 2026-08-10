@@ -16,7 +16,7 @@ export function Hero() {
             <Stack spacing={5}>
               <Stack spacing={4}>
                 <Text variant="caption" className={EYEBROW_TEXT_CLASS}>
-                  For 7 & 8-Figure Families
+                  Purpose-Driven Families
                 </Text>
                 <Heading as="h1" variant="heading-2xl" className="text-gray-50">
                   You built it.
@@ -27,10 +27,12 @@ export function Hero() {
                   it.
                 </Heading>
               </Stack>
-              <Text variant="body-md" className="max-w-lg text-gray-300">
-                Estate planning done with intention.
-                <br />
-                So the people you love live peacefully ever after.
+              <Text
+                variant="body-md"
+                className="max-w-lg text-gray-300 wide:max-w-sm"
+              >
+                Estate planning done with intention, so the people you love live
+                peacefully ever after.
               </Text>
             </Stack>
             <div className="flex flex-wrap gap-3">

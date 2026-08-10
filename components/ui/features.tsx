@@ -11,7 +11,6 @@ export type FeatureItem = {
 
 const DEFAULT_FEATURES: FeatureItem[] = [
   { label: "Licensed in California" },
-  { label: "10+ Years of Experience", marquee: "10+ Years Experience" },
   {
     label: "Legacy Program, Plans That Stay Current",
     marquee: "Legacy Program",

@@ -10,7 +10,7 @@ import { cn } from "@/lib/util";
 
 const DEFAULT_TITLE = "Trusted by professionals who plan ahead.";
 const DEFAULT_SUBTITLE =
-  "Real experiences from clients who chose clarity over complexity.";
+  "Real experiences from past clients who have chosen clarity over inaction.";
 
 export function TestimonialCard({ name, review, profession }: Review) {
   return (
