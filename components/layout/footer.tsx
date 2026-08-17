@@ -8,8 +8,8 @@ const footerLinkClass =
   "text-ds-body-sm text-gray-500 transition-colors hover:text-sand-400";
 
 const LEGAL_LINKS = [
-  { label: "Privacy Policy", href: "#privacy-policy" },
-  { label: "Disclaimer", href: "#disclaimer" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
 ] as const;
 
 export function Footer() {
