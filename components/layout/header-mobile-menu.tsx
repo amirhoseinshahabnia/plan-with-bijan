@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import { NavLink } from "@/components/layout/nav-link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/util";
 
@@ -135,13 +136,13 @@ export function HeaderMobileMenu({
               <ul className="mt-8 flex flex-col gap-6">
                 {links.map(({ label, href }) => (
                   <li key={label}>
-                    <a
+                    <NavLink
                       href={href}
                       className={mobileNavLinkClass}
-                      onClick={close}
+                      onNavigate={close}
                     >
                       {label}
-                    </a>
+                    </NavLink>
                   </li>
                 ))}
               </ul>

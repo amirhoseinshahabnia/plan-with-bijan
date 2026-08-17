@@ -1,6 +1,7 @@
 import { HeaderCompactBar } from "@/components/layout/header-compact-bar";
 import { HeaderMobileMenu } from "@/components/layout/header-mobile-menu";
 import { BrandLogo } from "@/components/layout/brand-logo";
+import { NavLink } from "@/components/layout/nav-link";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -26,9 +27,9 @@ export function Header() {
               aria-label="Main navigation"
             >
               {NAV_LINKS.map(({ label, href }) => (
-                <a key={label} href={href} className={navLinkClass}>
+                <NavLink key={label} href={href} className={navLinkClass}>
                   {label}
-                </a>
+                </NavLink>
               ))}
               <Button href={CTA_HREF} size="sm">
                 {CTA_LABEL}

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { MouseEvent } from "react";
+import { scrollToTop } from "@/lib/scroll";
 import { cn } from "@/lib/util";
 
 const LOGO_WIDTH = 201;
@@ -22,12 +23,7 @@ export function BrandLogo({ className }: BrandLogoProps) {
     }
 
     event.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        ? "auto"
-        : "smooth",
-    });
+    scrollToTop();
   };
 
   return (

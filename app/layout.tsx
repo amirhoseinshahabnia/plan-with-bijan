@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Playfair_Display } from "next/font/google";
 import { ChecklistStickyBar } from "@/components/layout/checklist-sticky-bar";
 import { Footer } from "@/components/layout/footer";
+import { HashScrollHandler } from "@/components/layout/hash-scroll-handler";
 import { Header } from "@/components/layout/header";
 import "./globals.css";
 
@@ -32,9 +33,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bricolageGrotesque.variable} ${playfairDisplay.variable} h-full scroll-smooth antialiased motion-reduce:scroll-auto`}
+      className={`${bricolageGrotesque.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <HashScrollHandler />
         <Header />
         {children}
         <Footer />
