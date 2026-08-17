@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BrandLogo } from "@/components/layout/brand-logo";
 import { cn } from "@/lib/util";
 import { Container } from "@/components/ui/container";
@@ -41,9 +42,9 @@ export function Footer() {
                     ·
                   </span>
                 )}
-                <a href={href} className={footerLinkClass}>
+                <Link href={href} className={footerLinkClass}>
                   {label}
-                </a>
+                </Link>
               </span>
             ))}
           </div>
