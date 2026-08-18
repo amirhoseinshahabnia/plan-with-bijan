@@ -2,13 +2,36 @@
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export async function subscribeNewsletter(
-  email: string,
-): Promise<{ ok: true } | { ok: false; error: string }> {
-  const trimmed = email.trim();
+export type SubscribeNewsletterInput = {
+  firstName: string;
+  email: string;
+};
 
-  if (!EMAIL_PATTERN.test(trimmed)) {
-    return { ok: false, error: "Enter a valid email address." };
+export type SubscribeNewsletterResult =
+  | { ok: true }
+  | { ok: false; error: string; field?: "firstName" | "email" };
+
+export async function subscribeNewsletter({
+  firstName,
+  email,
+}: SubscribeNewsletterInput): Promise<SubscribeNewsletterResult> {
+  const trimmedName = firstName.trim();
+  const trimmedEmail = email.trim();
+
+  if (!trimmedName) {
+    return {
+      ok: false,
+      field: "firstName",
+      error: "Enter your first name.",
+    };
+  }
+
+  if (!EMAIL_PATTERN.test(trimmedEmail)) {
+    return {
+      ok: false,
+      field: "email",
+      error: "Enter a valid email address.",
+    };
   }
 
   const webhookUrl = process.env.GHL_NEWSLETTER_URL;
@@ -24,7 +47,8 @@ export async function subscribeNewsletter(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email: trimmed,
+        firstName: trimmedName,
+        email: trimmedEmail,
         source: "newsletter",
       }),
     });
