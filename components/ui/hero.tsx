@@ -16,7 +16,7 @@ export function Hero() {
             <Stack spacing={5}>
               <Stack spacing={4}>
                 <Text variant="caption" className={EYEBROW_TEXT_CLASS}>
-                  Purpose-Driven Families
+                  For 7 & 8-Figure Purpose-Driven Families
                 </Text>
                 <Heading as="h1" variant="heading-2xl" className="text-gray-50">
                   You built it.

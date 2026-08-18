@@ -44,45 +44,34 @@ export default function PrivacyPolicyPage() {
                 Effective Date: {legalEffectiveDateLabel()}
               </Text>
               <Stack spacing={3}>
-                <Text
-                  variant="body-sm"
-                  className="uppercase text-navy-900"
-                >
+                <Text variant="body-sm" className="uppercase text-navy-900">
                   Important Notice Regarding Text Messaging
                 </Text>
                 <Text variant="body-sm" className="uppercase text-navy-900">
                   Data
                 </Text>
                 <Text variant="body-sm" className="text-gray-600">
-                  {BUSINESS.name}
-                  {" "}
-                  (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) DOES
-                  NOT share customer opt-in information, including phone numbers
-                  and consent records, with any affiliates or third parties for
-                  marketing, promotional, or any other purposes unrelated to
-                  providing our direct services. All text messaging originator
-                  opt-in data is kept strictly confidential.
+                  {BUSINESS.name} (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or
+                  &ldquo;our&rdquo;) DOES NOT share customer opt-in information,
+                  including phone numbers and consent records, with any
+                  affiliates or third parties for marketing, promotional, or any
+                  other purposes unrelated to providing our direct services. All
+                  text messaging originator opt-in data is kept strictly
+                  confidential.
                 </Text>
               </Stack>
             </Stack>
 
             <Stack spacing={8}>
               <Stack spacing={4}>
-                <Heading
-                  as="h2"
-                  variant="heading-sm"
-                  className="text-navy-900"
-                >
+                <Heading as="h2" variant="heading-sm" className="text-navy-900">
                   1. Information We Collect
                 </Heading>
                 <Text variant="body-sm" className="text-gray-600">
                   We collect the following types of information:
                 </Text>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Personal Information:
                   </Text>
                   <LegalList
@@ -94,10 +83,7 @@ export default function PrivacyPolicyPage() {
                   />
                 </Stack>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Non-Personal Information:
                   </Text>
                   <LegalList
@@ -109,10 +95,7 @@ export default function PrivacyPolicyPage() {
                   />
                 </Stack>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Customer Communication:
                   </Text>
                   <LegalList
@@ -126,11 +109,7 @@ export default function PrivacyPolicyPage() {
               </Stack>
 
               <Stack spacing={4}>
-                <Heading
-                  as="h2"
-                  variant="heading-sm"
-                  className="text-navy-900"
-                >
+                <Heading as="h2" variant="heading-sm" className="text-navy-900">
                   2. How We Use Your Information
                 </Heading>
                 <Text variant="body-sm" className="text-gray-600">
@@ -149,31 +128,22 @@ export default function PrivacyPolicyPage() {
               </Stack>
 
               <Stack spacing={4}>
-                <Heading
-                  as="h2"
-                  variant="heading-sm"
-                  className="text-navy-900"
-                >
+                <Heading as="h2" variant="heading-sm" className="text-navy-900">
                   3. SMS Messaging & Compliance
                 </Heading>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Text Message Program Terms & Conditions
                   </Text>
                   <Text variant="body-sm" className="text-gray-600">
-                    By opting into our SMS messaging services, you agree to receive
-                    text messages related to our services, including appointment
-                    reminders, customer support, and important updates.
+                    By opting into our SMS messaging services, you agree to
+                    receive text messages related to our services, including
+                    appointment reminders, customer support, and important
+                    updates.
                   </Text>
                 </Stack>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Opt-In & Consent:
                   </Text>
                   <LegalList
@@ -185,25 +155,19 @@ export default function PrivacyPolicyPage() {
                   />
                 </Stack>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Opt-Out Instructions:
                   </Text>
                   <LegalList
                     items={[
-                      "You can cancel SMS notifications at any time by replying \"STOP\"",
+                      'You can cancel SMS notifications at any time by replying "STOP"',
                       "You will receive a final confirmation message, and no further messages will be sent unless you re-opt in",
                       "All opt-out requests are processed immediately.",
                     ]}
                   />
                 </Stack>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Message Frequency & Content:
                   </Text>
                   <LegalList
@@ -215,10 +179,7 @@ export default function PrivacyPolicyPage() {
                   />
                 </Stack>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Help & Support:
                   </Text>
                   <LegalList
@@ -229,10 +190,7 @@ export default function PrivacyPolicyPage() {
                   />
                 </Stack>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Carrier Information:
                   </Text>
                   <LegalList
@@ -244,44 +202,35 @@ export default function PrivacyPolicyPage() {
                   />
                 </Stack>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     SMS Data Protection Statement
                   </Text>
                   <Text variant="body-sm" className="text-gray-600">
-                    No mobile information will be shared with third parties/affiliates
-                    for marketing/promotional purposes. Information sharing to
-                    subcontractors in support services, such as customer service is
-                    permitted. All other use case categories exclude text messaging
-                    originator opt-in data and consent; this information will not be
-                    shared with any third parties.
+                    No mobile information will be shared with third
+                    parties/affiliates for marketing/promotional purposes.
+                    Information sharing to subcontractors in support services,
+                    such as customer service is permitted. All other use case
+                    categories exclude text messaging originator opt-in data and
+                    consent; this information will not be shared with any third
+                    parties.
                   </Text>
                   <Text variant="body-sm" className="text-gray-600">
-                    We implement strict data protection measures to safeguard your SMS
-                    opt-in information and consent records.
+                    We implement strict data protection measures to safeguard
+                    your SMS opt-in information and consent records.
                   </Text>
                 </Stack>
               </Stack>
 
               <Stack spacing={4}>
-                <Heading
-                  as="h2"
-                  variant="heading-sm"
-                  className="text-navy-900"
-                >
+                <Heading as="h2" variant="heading-sm" className="text-navy-900">
                   4. Information Sharing & Disclosure
                 </Heading>
                 <Text variant="body-sm" className="text-gray-600">
-                  We do not sell, rent, or trade personal information. We may share
-                  information with:
+                  We do not sell, rent, or trade personal information. We may
+                  share information with:
                 </Text>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Service Providers:
                   </Text>
                   <LegalList
@@ -293,10 +242,7 @@ export default function PrivacyPolicyPage() {
                   />
                 </Stack>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Legal Compliance:
                   </Text>
                   <LegalList
@@ -307,10 +253,7 @@ export default function PrivacyPolicyPage() {
                   />
                 </Stack>
                 <Stack spacing={3}>
-                  <Text
-                    variant="body-sm"
-                    className="font-medium text-navy-900"
-                  >
+                  <Text variant="body-sm" className="font-medium text-navy-900">
                     Business Transfers:
                   </Text>
                   <LegalList
@@ -321,24 +264,20 @@ export default function PrivacyPolicyPage() {
                   />
                 </Stack>
                 <Text variant="body-sm" className="text-gray-600">
-                  All the above categories exclude text messaging originator opt-in
-                  data and consent; this information will not be shared with any third
-                  parties, excluding aggregators and providers of the Text Message
-                  services.
+                  All the above categories exclude text messaging originator
+                  opt-in data and consent; this information will not be shared
+                  with any third parties, excluding aggregators and providers of
+                  the Text Message services.
                 </Text>
               </Stack>
 
               <Stack spacing={4}>
-                <Heading
-                  as="h2"
-                  variant="heading-sm"
-                  className="text-navy-900"
-                >
+                <Heading as="h2" variant="heading-sm" className="text-navy-900">
                   5. Data Security
                 </Heading>
                 <Text variant="body-sm" className="text-gray-600">
-                  We implement and maintain reasonable security measures to protect
-                  your personal information:
+                  We implement and maintain reasonable security measures to
+                  protect your personal information:
                 </Text>
                 <LegalList
                   items={[
@@ -351,19 +290,15 @@ export default function PrivacyPolicyPage() {
                   ]}
                 />
                 <Text variant="body-sm" className="text-gray-600">
-                  Despite these measures, no method of transmission over the Internet
-                  or electronic storage is 100% secure. We strive to use commercially
-                  acceptable means to protect your personal information but cannot
-                  guarantee absolute security.
+                  Despite these measures, no method of transmission over the
+                  Internet or electronic storage is 100% secure. We strive to
+                  use commercially acceptable means to protect your personal
+                  information but cannot guarantee absolute security.
                 </Text>
               </Stack>
 
               <Stack spacing={4}>
-                <Heading
-                  as="h2"
-                  variant="heading-sm"
-                  className="text-navy-900"
-                >
+                <Heading as="h2" variant="heading-sm" className="text-navy-900">
                   6. Cookies & Tracking Technologies
                 </Heading>
                 <Text variant="body-sm" className="text-gray-600">
@@ -378,18 +313,14 @@ export default function PrivacyPolicyPage() {
                   ]}
                 />
                 <Text variant="body-sm" className="text-gray-600">
-                  You may control cookies through your browser settings. Disabling
-                  cookies may limit your ability to use certain features of our
-                  website.
+                  You may control cookies through your browser settings.
+                  Disabling cookies may limit your ability to use certain
+                  features of our website.
                 </Text>
               </Stack>
 
               <Stack spacing={4}>
-                <Heading
-                  as="h2"
-                  variant="heading-sm"
-                  className="text-navy-900"
-                >
+                <Heading as="h2" variant="heading-sm" className="text-navy-900">
                   7. Your Rights & Choices
                 </Heading>
                 <Text variant="body-sm" className="text-gray-600">
@@ -398,57 +329,45 @@ export default function PrivacyPolicyPage() {
                 <LegalList
                   items={[
                     "Access, update, or delete your personal information",
-                    "Opt-out of marketing emails by clicking \"unsubscribe\" in our emails",
-                    "Opt-out of SMS messages by replying \"STOP\"",
+                    'Opt-out of marketing emails by clicking "unsubscribe" in our emails',
+                    'Opt-out of SMS messages by replying "STOP"',
                     "Request information on how we process your data",
                     "Withdraw consent at any time for future communications",
                     "Lodge a complaint with a supervisory authority if you believe your rights have been violated",
                   ]}
                 />
                 <Text variant="body-sm" className="text-gray-600">
-                  To exercise these rights, please contact us using the information
-                  in Section 10.
+                  To exercise these rights, please contact us using the
+                  information in Section 10.
                 </Text>
               </Stack>
 
               <Stack spacing={4}>
-                <Heading
-                  as="h2"
-                  variant="heading-sm"
-                  className="text-navy-900"
-                >
+                <Heading as="h2" variant="heading-sm" className="text-navy-900">
                   8. Third-Party Links
                 </Heading>
                 <Text variant="body-sm" className="text-gray-600">
-                  Our website may contain links to third-party websites. We are not
-                  responsible for their privacy practices and encourage you to review
-                  their policies. This privacy policy applies only to information
-                  collected by {BUSINESS.name}.
+                  Our website may contain links to third-party websites. We are
+                  not responsible for their privacy practices and encourage you
+                  to review their policies. This privacy policy applies only to
+                  information collected by {BUSINESS.name}.
                 </Text>
               </Stack>
 
               <Stack spacing={4}>
-                <Heading
-                  as="h2"
-                  variant="heading-sm"
-                  className="text-navy-900"
-                >
+                <Heading as="h2" variant="heading-sm" className="text-navy-900">
                   9. Changes to This Privacy Policy
                 </Heading>
                 <Text variant="body-sm" className="text-gray-600">
-                  We may update this policy periodically. The latest version will
-                  always be available on our website with the effective date. For
-                  significant changes, we will notify you by email or through a notice
-                  on our website.
+                  We may update this policy periodically. The latest version
+                  will always be available on our website with the effective
+                  date. For significant changes, we will notify you by email or
+                  through a notice on our website.
                 </Text>
               </Stack>
 
               <Stack spacing={4}>
-                <Heading
-                  as="h2"
-                  variant="heading-sm"
-                  className="text-navy-900"
-                >
+                <Heading as="h2" variant="heading-sm" className="text-navy-900">
                   10. Contact Us
                 </Heading>
                 <Text variant="body-sm" className="text-gray-600">
@@ -458,9 +377,6 @@ export default function PrivacyPolicyPage() {
                 <Stack spacing={2}>
                   <Text variant="body-sm" className="text-gray-600">
                     {BUSINESS.name}
-                  </Text>
-                  <Text variant="body-sm" className="text-gray-600">
-                    Phone: {BUSINESS.phone}
                   </Text>
                   <Text variant="body-sm" className="text-gray-600">
                     Email: {BUSINESS.email}

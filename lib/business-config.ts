@@ -1,8 +1,7 @@
 export const BUSINESS = {
-  name: "Plan with Bijan",
-  phone: "TBD",
-  email: "TBD",
-  website: "TBD",
+  name: "Bijan Roboubi, Esq., DBA Plan With Bijan",
+  email: "hello@planwithbijan.com",
+  website: "planwithbijan.com",
 } as const;
 
 export const LEGAL_EFFECTIVE_DATE = "January 1";
