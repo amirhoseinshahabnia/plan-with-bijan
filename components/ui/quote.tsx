@@ -40,11 +40,7 @@ export function Quote({ id, quote: { quote, person }, className }: QuoteProps) {
               {quote}
             </Heading>
           </blockquote>
-          <Text
-            as="p"
-            variant="body-sm"
-            className={EYEBROW_TEXT_CLASS}
-          >
+          <Text as="p" variant="body-sm" className={EYEBROW_TEXT_CLASS}>
             {person}
           </Text>
         </Stack>

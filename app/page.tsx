@@ -6,6 +6,7 @@ import { Hero } from "@/components/ui/hero";
 import { OurApproach } from "@/components/ui/our-approach";
 import { RightFit } from "@/components/ui/right-fit";
 import { WhoWeServe } from "@/components/ui/who-we-serve";
+import { Newsletter } from "@/components/ui/newsletter";
 import { Quote } from "@/components/ui/quote";
 import { Testimonials } from "@/components/ui/testimonials";
 
@@ -27,6 +28,7 @@ export default function Home() {
       <OurApproach />
       <About />
       <Testimonials />
+      <Newsletter />
       <Quote
         quote={{
           person: "BIJAN ROBOUBI - KAISER LAW GROUP",
