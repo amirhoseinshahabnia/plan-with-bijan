@@ -173,7 +173,7 @@ export function About({
       id={id}
       as="section"
       padding="medium"
-      className={cn("bg-white", borderClass("soft", "y"), className)}
+      className={cn("bg-white", borderClass("soft", "t"), className)}
     >
       <Container>
         <div className="grid grid-cols-1 items-start gap-10 wide:grid-cols-[0.85fr_1.15fr] wide:gap-16">
