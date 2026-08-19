@@ -68,7 +68,7 @@ export function Modal({
       className={cn(
         "z-60 m-auto w-[calc(100%-2rem)] max-h-[calc(100dvh-2rem)] overflow-y-auto border-0 bg-transparent p-0",
         containerWidthClass("narrow"),
-        "backdrop:bg-navy-950/50",
+        "backdrop:bg-navy-950/70 backdrop:backdrop-blur-sm",
       )}
     >
       <div

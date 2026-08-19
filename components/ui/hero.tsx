@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
+import { OpenChecklistButton } from "@/components/ui/open-checklist-button";
 import { Section } from "@/components/ui/section";
 import { Stack } from "@/components/ui/stack";
 import { Text } from "@/components/ui/text";
@@ -37,7 +38,9 @@ export function Hero() {
             </Stack>
             <div className="flex flex-wrap gap-3">
               <Button>Request a Consultation</Button>
-              <Button intent="secondary">Get the Checklist</Button>
+              <OpenChecklistButton intent="secondary">
+                Get the Checklist
+              </OpenChecklistButton>
             </div>
           </Stack>
 
