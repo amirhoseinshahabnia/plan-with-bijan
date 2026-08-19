@@ -15,7 +15,6 @@ export const CHECKLIST_STICKY_SCROLL_OFFSET = 400;
 export const CHECKLIST_STICKY_TITLE = "Your estate planning roadmap";
 export const CHECKLIST_STICKY_LABEL =
   "The Complete Estate Planning Checklist →";
-export const CHECKLIST_STICKY_HREF = "#";
 
 export const navLinkClass =
   "text-ds-body-sm text-gray-100 transition-colors hover:text-sand-400";

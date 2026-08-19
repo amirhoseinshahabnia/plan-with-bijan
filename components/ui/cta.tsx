@@ -1,3 +1,4 @@
+import { type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
@@ -8,24 +9,35 @@ import { borderClass } from "@/lib/borders";
 import { cn } from "@/lib/util";
 import { type SectionPadding } from "@/lib/section-padding";
 
-type CTAProps = {
+type CTABaseProps = {
   id?: string;
   title: string;
   subtitle: string;
-  cta: string;
-  link: string;
   className?: string;
   padding?: SectionPadding;
 };
+
+type CTAWithLink = CTABaseProps & {
+  cta: string;
+  link: string;
+  action?: never;
+};
+
+type CTAWithAction = CTABaseProps & {
+  action: ReactNode;
+  cta?: never;
+  link?: never;
+};
+
+type CTAProps = CTAWithLink | CTAWithAction;
 
 export function CTA({
   id = "book-strategy-session",
   title,
   subtitle,
-  cta,
-  link,
   className,
   padding = "medium",
+  ...props
 }: CTAProps) {
   return (
     <Section
@@ -44,9 +56,13 @@ export function CTA({
               {subtitle}
             </Text>
           </Stack>
-          <Button href={link} animation="moveUp">
-            {cta}
-          </Button>
+          {"link" in props ? (
+            <Button href={props.link} animation="moveUp">
+              {props.cta}
+            </Button>
+          ) : (
+            props.action
+          )}
         </Stack>
       </Container>
     </Section>

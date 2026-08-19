@@ -4,6 +4,7 @@ import { ChecklistStickyBar } from "@/components/layout/checklist-sticky-bar";
 import { Footer } from "@/components/layout/footer";
 import { HashScrollHandler } from "@/components/layout/hash-scroll-handler";
 import { Header } from "@/components/layout/header";
+import { ChecklistModalProvider } from "@/components/ui/checklist-modal-provider";
 import "./globals.css";
 
 const bricolageGrotesque = Bricolage_Grotesque({
@@ -36,11 +37,13 @@ export default function RootLayout({
       className={`${bricolageGrotesque.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <HashScrollHandler />
-        <Header />
-        {children}
-        <Footer />
-        <ChecklistStickyBar />
+        <ChecklistModalProvider>
+          <HashScrollHandler />
+          <Header />
+          {children}
+          <Footer />
+          <ChecklistStickyBar />
+        </ChecklistModalProvider>
       </body>
     </html>
   );

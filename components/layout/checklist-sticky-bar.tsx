@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState, type TransitionEvent } from "react";
-import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { OpenChecklistButton } from "@/components/ui/open-checklist-button";
 import { Text } from "@/components/ui/text";
 import {
-  CHECKLIST_STICKY_HREF,
   CHECKLIST_STICKY_LABEL,
   CHECKLIST_STICKY_SCROLL_OFFSET,
   CHECKLIST_STICKY_TITLE,
@@ -132,21 +131,19 @@ export function ChecklistStickyBar() {
                 >
                   {CHECKLIST_STICKY_TITLE}
                 </Text>
-                <Button
-                  href={CHECKLIST_STICKY_HREF}
+                <OpenChecklistButton
                   size="sm"
                   className="hidden shrink-0 wide:inline-flex"
                 >
                   {CHECKLIST_STICKY_LABEL}
-                </Button>
-                <Button
-                  href={CHECKLIST_STICKY_HREF}
+                </OpenChecklistButton>
+                <OpenChecklistButton
                   size="xs"
                   aria-label={CHECKLIST_STICKY_LABEL}
                   className="w-full min-w-0 shrink wide:hidden"
                 >
                   {CHECKLIST_STICKY_LABEL}
-                </Button>
+                </OpenChecklistButton>
               </div>
             </Container>
           </div>

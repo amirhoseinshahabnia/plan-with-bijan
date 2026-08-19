@@ -7,6 +7,7 @@ import { OurApproach } from "@/components/ui/our-approach";
 import { RightFit } from "@/components/ui/right-fit";
 import { WhoWeServe } from "@/components/ui/who-we-serve";
 import { Newsletter } from "@/components/ui/newsletter";
+import { OpenChecklistButton } from "@/components/ui/open-checklist-button";
 import { Quote } from "@/components/ui/quote";
 import { Testimonials } from "@/components/ui/testimonials";
 
@@ -17,11 +18,15 @@ export default function Home() {
       <Features />
       <WhoWeServe />
       <CTA
+        id="checklist"
         title="Not ready for a consultation yet? Start with the checklist."
         subtitle="The Complete Estate Planning Checklist: for families who want to protect what they've built."
-        cta="Download the Checklist Now"
-        link="#book-strategy-session"
         padding="compact"
+        action={
+          <OpenChecklistButton animation="moveUp">
+            Download the Checklist Now
+          </OpenChecklistButton>
+        }
       />
       <RightFit />
       <EstatePlanningDoneRight />
