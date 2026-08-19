@@ -19,6 +19,7 @@ type LeadCaptureFormProps = {
   success: ReactNode;
   layout?: "inline" | "stack";
   className?: string;
+  autoFocus?: boolean;
 };
 
 export function LeadCaptureForm({
@@ -29,6 +30,7 @@ export function LeadCaptureForm({
   success,
   layout = "inline",
   className,
+  autoFocus = false,
 }: LeadCaptureFormProps) {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
@@ -99,6 +101,7 @@ export function LeadCaptureForm({
               invalid={Boolean(fieldErrors.firstName)}
               disabled={isSubmitting}
               required
+              autoFocus={autoFocus}
             />
           </Field>
           <Field

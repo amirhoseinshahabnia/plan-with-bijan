@@ -76,7 +76,10 @@ export function Newsletter({
             <Heading as="h2" variant="heading-xl" className="text-navy-900">
               {title}
             </Heading>
-            <Text variant="body-md" className="max-w-xl text-gray-600">
+            <Text
+              variant="body-md"
+              className="max-w-xl text-gray-600 text-balance"
+            >
               {subtitle}
             </Text>
           </Stack>

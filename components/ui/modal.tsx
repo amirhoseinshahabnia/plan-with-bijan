@@ -1,6 +1,12 @@
 "use client";
 
-import { useEffect, useId, useRef, type MouseEvent, type ReactNode } from "react";
+import {
+  useEffect,
+  useId,
+  useRef,
+  type MouseEvent,
+  type ReactNode,
+} from "react";
 import { X } from "lucide-react";
 import { containerWidthClass } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
@@ -79,14 +85,6 @@ export function Modal({
           className,
         )}
       >
-        <button
-          type="button"
-          aria-label="Close"
-          onClick={onClose}
-          className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center text-navy-900 transition-colors hover:text-copper-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sand-500"
-        >
-          <X size={20} aria-hidden="true" />
-        </button>
         <Stack spacing={6}>
           <Heading
             id={titleId}
@@ -98,6 +96,14 @@ export function Modal({
           </Heading>
           {children}
         </Stack>
+        <button
+          type="button"
+          aria-label="Close"
+          onClick={onClose}
+          className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center text-navy-900 transition-colors hover:text-copper-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sand-500"
+        >
+          <X size={20} aria-hidden="true" />
+        </button>
       </div>
     </dialog>
   );
