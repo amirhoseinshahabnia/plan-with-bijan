@@ -59,7 +59,6 @@ export function ChecklistModal({ open, onClose }: ChecklistModalProps) {
           submitLabel="Get the checklist"
           submittingLabel="Sending…"
           layout="stack"
-          autoFocus
           success={<ChecklistSuccess />}
         />
       </Stack>

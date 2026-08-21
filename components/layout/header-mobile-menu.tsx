@@ -1,25 +1,28 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { NavLink } from "@/components/layout/nav-link";
-import { Button } from "@/components/ui/button";
+import { OpenConsultationButton } from "@/components/ui/open-consultation-button";
 import { cn } from "@/lib/util";
 
-type NavLink = {
+type NavLinkItem = {
   label: string;
   href: string;
 };
 
 type HeaderMobileMenuProps = {
-  links: readonly NavLink[];
+  links: readonly NavLinkItem[];
   ctaLabel: string;
   mobileCtaLabel?: string;
-  ctaHref: string;
 };
 
 const mobileNavLinkClass =
   "text-ds-body-md text-gray-100 transition-colors hover:text-sand-400";
+
+function subscribe() {
+  return () => {};
+}
 
 function HamburgerIcon() {
   return (
@@ -62,14 +65,13 @@ export function HeaderMobileMenu({
   links,
   ctaLabel,
   mobileCtaLabel,
-  ctaHref,
 }: HeaderMobileMenuProps) {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false,
+  );
 
   const close = () => setOpen(false);
 
@@ -86,14 +88,13 @@ export function HeaderMobileMenu({
         >
           <HamburgerIcon />
         </button>
-        <Button
-          href={ctaHref}
+        <OpenConsultationButton
           size="xs"
           aria-label={ctaLabel}
           className="min-w-0 shrink px-2.5"
         >
           {mobileCtaLabel ?? ctaLabel}
-        </Button>
+        </OpenConsultationButton>
       </div>
 
       {mounted &&

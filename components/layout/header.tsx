@@ -2,11 +2,10 @@ import { HeaderCompactBar } from "@/components/layout/header-compact-bar";
 import { HeaderMobileMenu } from "@/components/layout/header-mobile-menu";
 import { BrandLogo } from "@/components/layout/brand-logo";
 import { NavLink } from "@/components/layout/nav-link";
-import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { OpenConsultationButton } from "@/components/ui/open-consultation-button";
 import { Section } from "@/components/ui/section";
 import {
-  CTA_HREF,
   CTA_LABEL,
   MOBILE_CTA_LABEL,
   NAV_LINKS,
@@ -31,16 +30,13 @@ export function Header() {
                   {label}
                 </NavLink>
               ))}
-              <Button href={CTA_HREF} size="sm">
-                {CTA_LABEL}
-              </Button>
+              <OpenConsultationButton size="sm">{CTA_LABEL}</OpenConsultationButton>
             </nav>
 
             <HeaderMobileMenu
               links={NAV_LINKS}
               ctaLabel={CTA_LABEL}
               mobileCtaLabel={MOBILE_CTA_LABEL}
-              ctaHref={CTA_HREF}
             />
           </div>
         </Container>

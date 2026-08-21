@@ -43,6 +43,10 @@ export function Modal({
       if (!dialog.open) {
         dialog.showModal();
       }
+      // Keep focus on the dialog shell so the first field is not auto-focused.
+      requestAnimationFrame(() => {
+        dialog.focus();
+      });
       return;
     }
 
@@ -68,6 +72,7 @@ export function Modal({
   return (
     <dialog
       ref={dialogRef}
+      tabIndex={-1}
       aria-labelledby={titleId}
       onClose={onClose}
       onClick={handleBackdropClick}
@@ -75,6 +80,7 @@ export function Modal({
         "z-60 m-auto w-[calc(100%-2rem)] max-h-[calc(100dvh-2rem)] overflow-y-auto border-0 bg-transparent p-0",
         containerWidthClass("narrow"),
         "backdrop:bg-navy-950/70 backdrop:backdrop-blur-sm",
+        "focus:outline-none",
       )}
     >
       <div

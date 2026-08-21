@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { LeadCaptureForm } from "@/components/ui/lead-capture-form";
 import { OpenChecklistButton } from "@/components/ui/open-checklist-button";
+import { OpenConsultationButton } from "@/components/ui/open-consultation-button";
 import { Section } from "@/components/ui/section";
 import { Stack } from "@/components/ui/stack";
 import { Text } from "@/components/ui/text";
@@ -36,14 +36,13 @@ function NewsletterSuccess() {
           get the complete estate planning checklist
         </OpenChecklistButton>
         , or{" "}
-        <Button
-          type="button"
+        <OpenConsultationButton
           intent="tertiary"
           size="sm"
           className={INLINE_TEXT_BUTTON_CLASS}
         >
           request a consultation
-        </Button>{" "}
+        </OpenConsultationButton>{" "}
         if you&apos;re ready to talk.
       </Text>
     </Stack>

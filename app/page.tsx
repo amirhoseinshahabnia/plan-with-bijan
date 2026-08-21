@@ -8,6 +8,7 @@ import { RightFit } from "@/components/ui/right-fit";
 import { WhoWeServe } from "@/components/ui/who-we-serve";
 import { Newsletter } from "@/components/ui/newsletter";
 import { OpenChecklistButton } from "@/components/ui/open-checklist-button";
+import { OpenConsultationButton } from "@/components/ui/open-consultation-button";
 import { Quote } from "@/components/ui/quote";
 import { Testimonials } from "@/components/ui/testimonials";
 
@@ -45,8 +46,11 @@ export default function Home() {
       <CTA
         title="Ready to Protect Your Family? Request a Consultation."
         subtitle="We are selective about who we work with because your plan deserves our full attention. If you are serious about protecting your family and everything you have built, fill out the form below. Our team will review your request and if we believe we can truly help you, we will be in touch."
-        cta="Request a Consultation"
-        link="#book-strategy-session"
+        action={
+          <OpenConsultationButton animation="moveUp">
+            Request a Consultation
+          </OpenConsultationButton>
+        }
       />
     </main>
   );

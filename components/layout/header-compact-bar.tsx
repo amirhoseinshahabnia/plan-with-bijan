@@ -2,10 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { BrandLogo } from "@/components/layout/brand-logo";
-import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { OpenConsultationButton } from "@/components/ui/open-consultation-button";
 import {
-  CTA_HREF,
   CTA_LABEL,
   HEADER_COMPACT_SCROLL_OFFSET,
   MOBILE_CTA_LABEL,
@@ -18,17 +17,19 @@ function HeaderCompactBarContent() {
     <>
       <BrandLogo className="shrink-0 text-ds-body-lg text-gray-100 hover:text-gray-200 wide:h-8" />
 
-      <Button href={CTA_HREF} size="sm" className="hidden wide:inline-flex">
+      <OpenConsultationButton
+        size="sm"
+        className="hidden wide:inline-flex"
+      >
         {CTA_LABEL}
-      </Button>
-      <Button
-        href={CTA_HREF}
+      </OpenConsultationButton>
+      <OpenConsultationButton
         size="xs"
         aria-label={CTA_LABEL}
         className="min-w-0 shrink px-2.5 wide:hidden"
       >
         {MOBILE_CTA_LABEL}
-      </Button>
+      </OpenConsultationButton>
     </>
   );
 }

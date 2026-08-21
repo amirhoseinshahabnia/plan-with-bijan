@@ -7,7 +7,6 @@ export const NAV_LINKS = [
 
 export const CTA_LABEL = "Request a Consultation";
 export const MOBILE_CTA_LABEL = "Request Session";
-export const CTA_HREF = "#";
 
 export const HEADER_COMPACT_SCROLL_OFFSET = 200;
 
