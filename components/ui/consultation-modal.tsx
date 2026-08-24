@@ -7,6 +7,7 @@ import {
   type SubmitConsultationField,
 } from "@/app/actions/submit-consultation";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Modal } from "@/components/ui/modal";
@@ -46,6 +47,7 @@ type FormState = {
   estateValue: EstateValueValue | "";
   hasEstatePlan: HasEstatePlanValue | "";
   prompt: string;
+  newsletter: boolean;
 };
 
 const INITIAL_FORM: FormState = {
@@ -57,6 +59,7 @@ const INITIAL_FORM: FormState = {
   estateValue: "",
   hasEstatePlan: "",
   prompt: "",
+  newsletter: false,
 };
 
 function hasLoosePhone(phone: string): boolean {
@@ -211,6 +214,7 @@ function ConsultationWizard({
         estateValue: form.estateValue,
         hasEstatePlan: form.hasEstatePlan,
         prompt: form.prompt,
+        newsletter: form.newsletter,
       });
 
       if (result.ok) {
@@ -449,6 +453,16 @@ function ConsultationWizard({
                   disabled={isSubmitting}
                 />
               </Field>
+              <Checkbox
+                id="consultation-newsletter"
+                name="newsletter"
+                checked={form.newsletter}
+                onChange={(event) =>
+                  updateField("newsletter", event.target.checked)
+                }
+                disabled={isSubmitting}
+                label="Also send me Bijan's weekly newsletter with estate planning tips."
+              />
             </Stack>
           ) : null}
 

@@ -27,6 +27,7 @@ export type SubmitConsultationInput = {
   estateValue: EstateValueValue;
   hasEstatePlan: HasEstatePlanValue;
   prompt: string;
+  newsletter: boolean;
 };
 
 export type SubmitConsultationField =
@@ -151,6 +152,7 @@ export async function submitConsultation(
           input.hasEstatePlan,
         ),
         prompt,
+        newsletter: Boolean(input.newsletter),
       }),
     });
 
