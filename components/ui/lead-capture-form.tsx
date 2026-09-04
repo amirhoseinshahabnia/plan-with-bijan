@@ -16,10 +16,11 @@ type LeadCaptureFormProps = {
   idPrefix: string;
   submitLabel: string;
   submittingLabel: string;
-  success: ReactNode;
+  success?: ReactNode;
   layout?: "inline" | "stack";
   className?: string;
   autoFocus?: boolean;
+  onSuccess?: () => void;
 };
 
 export function LeadCaptureForm({
@@ -31,6 +32,7 @@ export function LeadCaptureForm({
   layout = "inline",
   className,
   autoFocus = false,
+  onSuccess,
 }: LeadCaptureFormProps) {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
@@ -55,6 +57,7 @@ export function LeadCaptureForm({
         setIsSuccess(true);
         setFirstName("");
         setEmail("");
+        onSuccess?.();
         return;
       }
 
@@ -95,7 +98,7 @@ export function LeadCaptureForm({
               type="text"
               name="firstName"
               autoComplete="given-name"
-              placeholder="First name"
+              placeholder="Name"
               value={firstName}
               onChange={(event) => setFirstName(event.target.value)}
               invalid={Boolean(fieldErrors.firstName)}

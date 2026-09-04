@@ -18,7 +18,7 @@ import { cn } from "@/lib/util";
 type ModalProps = {
   open: boolean;
   onClose: () => void;
-  title: string;
+  title?: string;
   children: ReactNode;
   className?: string;
 };
@@ -73,7 +73,8 @@ export function Modal({
     <dialog
       ref={dialogRef}
       tabIndex={-1}
-      aria-labelledby={titleId}
+      aria-labelledby={title ? titleId : undefined}
+      aria-label={title ? undefined : "Dialog"}
       onClose={onClose}
       onClick={handleBackdropClick}
       className={cn(
@@ -92,14 +93,16 @@ export function Modal({
         )}
       >
         <Stack spacing={6}>
-          <Heading
-            id={titleId}
-            as="h2"
-            variant="heading-lg"
-            className="pr-10 text-navy-900"
-          >
-            {title}
-          </Heading>
+          {title ? (
+            <Heading
+              id={titleId}
+              as="h2"
+              variant="heading-lg"
+              className="pr-10 text-navy-900"
+            >
+              {title}
+            </Heading>
+          ) : null}
           {children}
         </Stack>
         <button

@@ -121,16 +121,9 @@ export function ChecklistStickyBar() {
               <div
                 className={cn(
                   sectionPaddingClasses({ padding: "minimal" }),
-                  "flex min-w-0 items-center justify-between gap-4",
+                  "flex min-w-0 items-center justify-center gap-4",
                 )}
               >
-                <Text
-                  as="p"
-                  variant="body-sm"
-                  className="hidden min-w-0 truncate text-gray-100 wide:block"
-                >
-                  {CHECKLIST_STICKY_TITLE}
-                </Text>
                 <OpenChecklistButton
                   size="sm"
                   className="hidden shrink-0 wide:inline-flex"

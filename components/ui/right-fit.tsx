@@ -105,7 +105,7 @@ const DEFAULT_FIT: RightFitColumn = {
       We <span className="italic">are</span> a fit if you...
     </>
   ),
-  items: ["Live in California", "Have a net worth of $1MM or more"],
+  items: ["Live in California", "Have a net worth of $10MM or more"],
   atLeastOneItems: [
     "Have minor children",
     "Own investment properties",
@@ -126,7 +126,7 @@ const DEFAULT_NOT_FIT: RightFitColumn = {
     "Are looking for the lowest price",
     "Expect legal advice before booking",
     "Are not open to sharing details about your assets and your wishes",
-    "Want a generic, one-size-fits-all document",
+    "Want generic, one-size-fits-all documents",
     "Are not ready to plan alongside your spouse",
     "Are not ready to take action today",
   ],

@@ -43,7 +43,7 @@ type FormState = {
   email: string;
   phone: string;
   californiaResident: CaliforniaResidentValue | "";
-  situation: SituationValue | "";
+  situations: SituationValue[];
   estateValue: EstateValueValue | "";
   hasEstatePlan: HasEstatePlanValue | "";
   prompt: string;
@@ -55,7 +55,7 @@ const INITIAL_FORM: FormState = {
   email: "",
   phone: "",
   californiaResident: "",
-  situation: "",
+  situations: [],
   estateValue: "",
   hasEstatePlan: "",
   prompt: "",
@@ -154,9 +154,9 @@ function ConsultationWizard({
       }
     }
 
-    if (currentStep === 2 && !form.situation) {
+    if (currentStep === 2 && form.situations.length === 0) {
       errors.situation =
-        "Select the option that best describes your situation.";
+        "Select at least one option that describes your situation.";
     }
 
     if (currentStep === 3 && !form.estateValue) {
@@ -193,7 +193,7 @@ function ConsultationWizard({
 
     if (
       !form.californiaResident ||
-      !form.situation ||
+      form.situations.length === 0 ||
       !form.estateValue ||
       !form.hasEstatePlan
     ) {
@@ -210,7 +210,7 @@ function ConsultationWizard({
         email: form.email,
         phone: form.phone,
         californiaResident: form.californiaResident,
-        situation: form.situation,
+        situations: form.situations,
         estateValue: form.estateValue,
         hasEstatePlan: form.hasEstatePlan,
         prompt: form.prompt,
@@ -373,13 +373,17 @@ function ConsultationWizard({
           {step === 2 ? (
             <Stack spacing={3}>
               <Text variant="body-sm" className="font-medium text-navy-900">
-                Which best describes your situation?
+                Which best describes your situation?{" "}
+                <span className="font-normal text-gray-500">
+                  (Select all that apply)
+                </span>
               </Text>
               <OptionGroup
+                multiple
                 name="situation"
-                value={form.situation}
+                value={form.situations}
                 onChange={(value) =>
-                  updateField("situation", value as SituationValue)
+                  updateField("situations", value as SituationValue[])
                 }
                 options={SITUATION_OPTIONS}
                 invalid={Boolean(fieldErrors.situation)}

@@ -7,6 +7,7 @@ import {
   SITUATION_OPTIONS,
   isConsultationQualified,
   labelForOption,
+  labelsForOptions,
   type CaliforniaResidentValue,
   type EstateValueValue,
   type HasEstatePlanValue,
@@ -23,7 +24,7 @@ export type SubmitConsultationInput = {
   email: string;
   phone: string;
   californiaResident: CaliforniaResidentValue;
-  situation: SituationValue;
+  situations: SituationValue[];
   estateValue: EstateValueValue;
   hasEstatePlan: HasEstatePlanValue;
   prompt: string;
@@ -62,6 +63,7 @@ export async function submitConsultation(
   const email = input.email.trim();
   const phone = input.phone.trim();
   const prompt = input.prompt.trim();
+  const situations = input.situations;
 
   if (!fullName) {
     return { ok: false, field: "fullName", error: "Enter your full name." };
@@ -91,11 +93,14 @@ export async function submitConsultation(
     };
   }
 
-  if (!hasValidOption(input.situation, SITUATION_OPTIONS)) {
+  if (
+    situations.length === 0 ||
+    situations.some((situation) => !hasValidOption(situation, SITUATION_OPTIONS))
+  ) {
     return {
       ok: false,
       field: "situation",
-      error: "Select the option that best describes your situation.",
+      error: "Select at least one option that describes your situation.",
     };
   }
 
@@ -117,7 +122,7 @@ export async function submitConsultation(
 
   const status: ConsultationStatus = isConsultationQualified({
     californiaResident: input.californiaResident,
-    situation: input.situation,
+    situations,
     estateValue: input.estateValue,
   })
     ? "qualified"
@@ -145,7 +150,7 @@ export async function submitConsultation(
           CALIFORNIA_RESIDENT_OPTIONS,
           input.californiaResident,
         ),
-        situation: labelForOption(SITUATION_OPTIONS, input.situation),
+        situation: labelsForOptions(SITUATION_OPTIONS, situations).join(", "),
         estateValue: labelForOption(ESTATE_VALUE_OPTIONS, input.estateValue),
         hasEstatePlan: labelForOption(
           HAS_ESTATE_PLAN_OPTIONS,

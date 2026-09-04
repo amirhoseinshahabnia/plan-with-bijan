@@ -21,7 +21,7 @@ const DEFAULT_CARDS: ProcessCardItem[] = [
     step: "01",
     title: "Custom Legal Documents",
     description:
-      "Every client is different. Your trust, will, powers of attorney, and healthcare directives should reflect your specific situation, not a template pulled from a drawer.",
+      "Every client is different. Your trust, will, power of attorney, and healthcare directive should reflect your specific situation, not a template pulled from a drawer.",
   },
   {
     step: "02",

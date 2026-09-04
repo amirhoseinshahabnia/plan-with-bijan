@@ -11,7 +11,7 @@ import { cn } from "@/lib/util";
 
 const DEFAULT_TITLE = "Stay Informed. Stay Protected.";
 const DEFAULT_SUBTITLE =
-  "Most families find out what they did wrong when it's too late. Get Bijan's estate planning insights delivered straight to your inbox so yours never has to.";
+  "Get Bijan's estate planning insights delivered straight to your inbox to stay informed.";
 
 const INLINE_TEXT_BUTTON_CLASS =
   "inline-flex min-h-0 align-baseline py-0 text-copper-600 hover:text-copper-500 after:bg-copper-500";

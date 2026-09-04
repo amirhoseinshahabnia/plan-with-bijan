@@ -17,13 +17,13 @@ export type AboutTimelineItem = {
 const DEFAULT_EYEBROW = "About The Attorney";
 const DEFAULT_HEADLINE = "Two careers. One throughline.";
 const DEFAULT_LEDE =
-  "Bijan Roboubi is a Partner at Kaiser Law Group (KLG), a highly reputable estate planning law firm based in Long Beach, California, where they have helped protect over $1B worth of assets in over 2 decades. Prior to the practice of law, Bijan managed 9-figure construction contracts as a Civil Engineer at the Port of Los Angeles. When not practicing law, Bijan can be found practicing mindfulness, playing soccer, or enjoying an active lifestyle with his wife, Bani, hiking, sailing, or walking by the beach.";
+  "Bijan Roboubi is a Partner at the Kaiser Law Group (KLG), a highly reputable estate planning law firm based in Long Beach, California, where they have helped protect over $1B worth of assets in over 2 decades. When not practicing law, Bijan can be found playing soccer, playing the guitar, or hiking and sailing with his wife, Bani.";
 
 const DEFAULT_TIMELINE: AboutTimelineItem[] = [
   {
     role: "Education",
     detail:
-      "B.S. and M.S. in Civil Engineering — Cal Poly Pomona and USC<br/>JD – Loyola Law School",
+      "BS in Civil Engineering — Cal Poly Pomona<br/>MS in Civil Engineering — USC<br/>JD – Loyola Law School<br/>Licensed to practice law in California",
   },
   // {
   //   role: "10+ Years",

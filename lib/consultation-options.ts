@@ -28,11 +28,10 @@ export const SITUATION_OPTIONS = [
 ] as const;
 
 export const ESTATE_VALUE_OPTIONS = [
-  { value: "under_1m", label: "Under $1M" },
-  { value: "1m_5m", label: "$1M – $5M" },
-  { value: "5m_10m", label: "$5M – $10M" },
-  { value: "10m_25m", label: "$10M – $25M" },
-  { value: "25m_plus", label: "$25M+" },
+  { value: "under_5m", label: "under $5MM" },
+  { value: "5m_15m", label: "$5MM - $15MM" },
+  { value: "15m_30m", label: "$15MM to $30MM" },
+  { value: "30m_plus", label: "$30MM+" },
   {
     value: "prefer_privately",
     label: "I'd prefer to discuss privately",
@@ -66,10 +65,9 @@ export type HasEstatePlanValue =
   (typeof HAS_ESTATE_PLAN_OPTIONS)[number]["value"];
 
 const QUALIFYING_ESTATE_VALUES = new Set<EstateValueValue>([
-  "1m_5m",
-  "5m_10m",
-  "10m_25m",
-  "25m_plus",
+  "5m_15m",
+  "15m_30m",
+  "30m_plus",
 ]);
 
 const QUALIFYING_SITUATIONS_FOR_PRIVATE = new Set<SituationValue>([
@@ -86,13 +84,20 @@ export function labelForOption<T extends { value: string; label: string }>(
   return options.find((option) => option.value === value)?.label ?? value;
 }
 
+export function labelsForOptions<T extends { value: string; label: string }>(
+  options: readonly T[],
+  values: readonly string[],
+): string[] {
+  return values.map((value) => labelForOption(options, value));
+}
+
 export function isConsultationQualified({
   californiaResident,
-  situation,
+  situations,
   estateValue,
 }: {
   californiaResident: CaliforniaResidentValue;
-  situation: SituationValue;
+  situations: readonly SituationValue[];
   estateValue: EstateValueValue;
 }): boolean {
   if (californiaResident !== "yes") {
@@ -105,6 +110,8 @@ export function isConsultationQualified({
 
   return (
     estateValue === "prefer_privately" &&
-    QUALIFYING_SITUATIONS_FOR_PRIVATE.has(situation)
+    situations.some((situation) =>
+      QUALIFYING_SITUATIONS_FOR_PRIVATE.has(situation),
+    )
   );
 }

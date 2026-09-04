@@ -37,15 +37,15 @@ export default function Home() {
       <Newsletter />
       <Quote
         quote={{
-          person: "BIJAN ROBOUBI - KAISER LAW GROUP",
+          person: "BIJAN ROBOUBI",
           quote:
-            '"Most people spend 30 to 40 years building their wealth, and only spend 3 to 4 hours planning what happens after they are gone. We help families address this imbalance so they can create generational wealth and leave a lasting legacy."',
+            '"Most people spend 30 to 40 years to build their wealth, and only spend 3 to 4 hours to plan what happens to it after they are gone. We help families address this imbalance so they can create generational wealth and leave a lasting legacy."',
         }}
       />
 
       <CTA
         title="Ready to Protect Your Family? Request a Consultation."
-        subtitle="We are selective about who we work with because your plan deserves our full attention. If you are serious about protecting your family and everything you have built, fill out the form below. Our team will review your request and if we believe we can truly help you, we will be in touch."
+        subtitle="We are intentional about who we work with because your plan deserves our full attention. If you are serious about protecting your family and everything you have built, fill out the form below. Our team will review your request and if we believe we can truly help you, we will be in touch."
         action={
           <OpenConsultationButton animation="moveUp">
             Request a Consultation
