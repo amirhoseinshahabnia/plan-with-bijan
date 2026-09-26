@@ -14,7 +14,6 @@ import { Modal } from "@/components/ui/modal";
 import { OptionGroup } from "@/components/ui/option-group";
 import { Stack } from "@/components/ui/stack";
 import { Text } from "@/components/ui/text";
-import { useChecklistModal } from "@/components/ui/checklist-modal-provider";
 import {
   CALIFORNIA_RESIDENT_OPTIONS,
   ESTATE_VALUE_OPTIONS,
@@ -29,9 +28,6 @@ import { cn } from "@/lib/util";
 
 const TOTAL_STEPS = 5;
 const FALLBACK_ERROR = "Something went wrong. Please try again.";
-
-const INLINE_TEXT_BUTTON_CLASS =
-  "inline-flex min-h-0 align-baseline py-0 text-copper-600 hover:text-copper-500 after:bg-copper-500";
 
 type ConsultationModalProps = {
   open: boolean;
@@ -66,40 +62,16 @@ function hasLoosePhone(phone: string): boolean {
   return phone.replace(/\D/g, "").length >= 7;
 }
 
-function QualifiedSuccess() {
+function ConsultationSuccess() {
   return (
     <Stack spacing={2}>
       <Text variant="body-sm" className="font-bold text-navy-900">
         Thank you.
       </Text>
       <Text variant="body-sm" className="text-balance text-gray-600">
-        Our team from KAISER LAW GROUP will personally review your request and
-        reach out to schedule your session.
-      </Text>
-    </Stack>
-  );
-}
-
-function UnqualifiedSuccess({
-  onOpenChecklist,
-}: {
-  onOpenChecklist: () => void;
-}) {
-  return (
-    <Stack spacing={2}>
-      <Text variant="body-sm" className="text-balance text-gray-600">
-        Based on what you&apos;ve shared, a strategy session may not be the
-        right next step just yet. Start with our{" "}
-        <Button
-          type="button"
-          intent="tertiary"
-          size="sm"
-          className={INLINE_TEXT_BUTTON_CLASS}
-          onClick={onOpenChecklist}
-        >
-          Estate Planning Checklist
-        </Button>{" "}
-        instead — and when your situation changes, we&apos;ll be here.
+        We are reviewing your request. If appropriate, a client coordinator from
+        Kaiser Law Group will reach out to schedule your consultation with
+        Bijan.
       </Text>
     </Stack>
   );
@@ -514,34 +486,31 @@ function ConsultationWizard({
 
 export function ConsultationModal({ open, onClose }: ConsultationModalProps) {
   const [formKey, setFormKey] = useState(0);
-  const [successStatus, setSuccessStatus] = useState<ConsultationStatus | null>(
-    null,
-  );
+  const [isSuccess, setIsSuccess] = useState(false);
   const wasOpenRef = useRef(false);
-  const { open: openChecklist } = useChecklistModal();
 
   useEffect(() => {
     if (wasOpenRef.current && !open) {
       setFormKey((current) => current + 1);
-      setSuccessStatus(null);
+      setIsSuccess(false);
     }
 
     wasOpenRef.current = open;
   }, [open]);
 
-  const handleOpenChecklist = () => {
-    onClose();
-    openChecklist();
-  };
-
   return (
-    <Modal open={open} onClose={onClose} title="Request a Consultation">
-      {successStatus === "qualified" ? (
-        <QualifiedSuccess />
-      ) : successStatus === "unqualified" ? (
-        <UnqualifiedSuccess onOpenChecklist={handleOpenChecklist} />
+    <Modal
+      open={open}
+      onClose={onClose}
+      title={isSuccess ? undefined : "Request a Consultation"}
+    >
+      {isSuccess ? (
+        <ConsultationSuccess />
       ) : (
-        <ConsultationWizard key={formKey} onSuccess={setSuccessStatus} />
+        <ConsultationWizard
+          key={formKey}
+          onSuccess={() => setIsSuccess(true)}
+        />
       )}
     </Modal>
   );

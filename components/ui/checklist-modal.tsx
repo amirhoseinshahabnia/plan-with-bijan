@@ -15,15 +15,14 @@ function ChecklistSuccess() {
   return (
     <Stack spacing={2}>
       <Text variant="body-sm" className="font-bold text-navy-900">
-        You&apos;re In.
-        <br />
         Check Your Inbox
+        <br />
+        The Complete Estate Planning Checklist is on its way.
       </Text>
       <Text variant="body-sm" className="text-balance text-gray-600">
-        Your Complete Estate Planning Checklist is on its way to your email
-        right now. Don&apos;t see it? Check your spam or promotions folder, and
-        be sure to move it to your inbox (or mark it &quot;Not Spam&quot;) so
-        future updates from us land in your inbox.
+        Don&apos;t see it? Check your spam or promotions folder, and be sure to
+        move it to your inbox (or mark it &quot;Not Spam&quot;) so future
+        updates from us land in your inbox.
       </Text>
     </Stack>
   );
