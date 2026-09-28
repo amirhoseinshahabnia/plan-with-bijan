@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import { ChecklistModal } from "@/components/ui/checklist-modal";
+import { useOpenFromQueryParam } from "@/lib/use-open-from-query-param";
 
 type ChecklistModalContextValue = {
   open: () => void;
@@ -20,6 +21,8 @@ const ChecklistModalContext = createContext<ChecklistModalContextValue | null>(
   null,
 );
 
+const CHECKLIST_PARAM = "checklist";
+
 export function ChecklistModalProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const open = useCallback(() => setIsOpen(true), []);
@@ -28,6 +31,8 @@ export function ChecklistModalProvider({ children }: { children: ReactNode }) {
     () => ({ open, close, isOpen }),
     [open, close, isOpen],
   );
+
+  useOpenFromQueryParam(CHECKLIST_PARAM, open);
 
   return (
     <ChecklistModalContext.Provider value={value}>
