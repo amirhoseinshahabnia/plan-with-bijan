@@ -78,7 +78,7 @@ export function Modal({
       onClose={onClose}
       onClick={handleBackdropClick}
       className={cn(
-        "z-60 m-auto w-[calc(100%-2rem)] max-h-[calc(100dvh-2rem)] overflow-y-auto border-0 bg-transparent p-0",
+        "z-60 m-auto w-[calc(100%-2rem)] max-h-[calc(100svh-2rem)] overflow-y-auto border-0 bg-transparent p-0",
         containerWidthClass("narrow"),
         "backdrop:bg-navy-950/70 backdrop:backdrop-blur-sm",
         "focus:outline-none",

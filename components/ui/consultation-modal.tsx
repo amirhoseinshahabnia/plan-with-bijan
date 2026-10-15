@@ -257,7 +257,7 @@ function ConsultationWizard({
         </div>
       </Stack>
 
-      <div className="flex min-h-[min(26rem,calc(100dvh-18rem))] flex-col md:min-h-112">
+      <div className="flex min-h-[min(26rem,calc(100svh-18rem))] flex-col md:min-h-112">
         <div className="flex-1">
           {step === 1 ? (
             <Stack spacing={3}>
