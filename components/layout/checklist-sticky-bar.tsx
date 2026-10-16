@@ -15,6 +15,9 @@ import { cn } from "@/lib/util";
 export function ChecklistStickyBar() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
+  // Invisible element whose height equals the iPhone's bottom safe area
+  // (home-bar zone). It is 0 when the browser toolbar covers the bottom.
+  const insetProbeRef = useRef<HTMLDivElement>(null);
   const shouldShowRef = useRef(false);
   const [isPresent, setIsPresent] = useState(false);
   const [shouldShow, setShouldShow] = useState(false);
@@ -41,6 +44,8 @@ export function ChecklistStickyBar() {
     const bar = barRef.current;
     if (!bar) return;
 
+    // barRef wraps only the bar's content, so barHeight never includes
+    // the safe-area space. The page slot (wrapper min-height) stays the same.
     const measure = () => setBarHeight(bar.offsetHeight);
     measure();
 
@@ -68,9 +73,12 @@ export function ChecklistStickyBar() {
         return;
       }
 
+      // Include the safe area so the fixed bar (content + safe area) hands
+      // over to its in-page slot at the exact same spot, with no jump.
+      const safeAreaBottom = insetProbeRef.current?.offsetHeight ?? 0;
       const scrollBottom = scrollY + window.innerHeight;
       const wrapperTop = wrapper.offsetTop;
-      setIsFixed(scrollBottom < wrapperTop + barHeight);
+      setIsFixed(scrollBottom < wrapperTop + barHeight + safeAreaBottom);
     };
 
     update();
@@ -93,12 +101,27 @@ export function ChecklistStickyBar() {
   const isAnimatingOut = isPresent && !shouldShow;
   const useFixedPosition = isFixed || isAnimatingOut;
 
+  // While fixed to the screen, the bar grows by the safe area so the navy
+  // runs to the bottom edge and the button clears the iPhone home bar.
+  // Once docked in the page, it is just the bar's own height.
+  const outerHeight =
+    barHeight > 0
+      ? useFixedPosition
+        ? `calc(${barHeight}px + env(safe-area-inset-bottom))`
+        : barHeight
+      : undefined;
+
   return (
     <div
       ref={wrapperRef}
       className="relative w-full"
       style={{ minHeight: isPresent ? barHeight : 0 }}
     >
+      <div
+        ref={insetProbeRef}
+        aria-hidden="true"
+        className="pointer-events-none invisible fixed bottom-0 left-0 h-[env(safe-area-inset-bottom)] w-0"
+      />
       {isPresent ? (
         <div
           aria-hidden={!shouldShow}
@@ -107,38 +130,47 @@ export function ChecklistStickyBar() {
             useFixedPosition ? "fixed bottom-0" : "absolute bottom-0",
             !shouldShow && "pointer-events-none",
           )}
-          style={barHeight > 0 ? { height: barHeight } : undefined}
+          style={
+            outerHeight !== undefined ? { height: outerHeight } : undefined
+          }
         >
           <div
-            ref={barRef}
             onTransitionEnd={handleTransitionEnd}
             className={cn(
               "bg-navy-900 transition-transform duration-300 ease-out motion-reduce:transition-none",
               shouldShow ? "translate-y-0" : "translate-y-full",
             )}
           >
-            <Container>
+            <div ref={barRef}>
+              <Container>
+                <div
+                  className={cn(
+                    sectionPaddingClasses({ padding: "minimal" }),
+                    "flex min-w-0 items-center justify-center gap-4",
+                  )}
+                >
+                  <OpenChecklistButton
+                    size="sm"
+                    className="hidden shrink-0 wide:inline-flex"
+                  >
+                    {CHECKLIST_STICKY_LABEL}
+                  </OpenChecklistButton>
+                  <OpenChecklistButton
+                    size="xs"
+                    aria-label={CHECKLIST_STICKY_LABEL}
+                    className="w-full min-w-0 shrink wide:hidden"
+                  >
+                    {CHECKLIST_STICKY_LABEL}
+                  </OpenChecklistButton>
+                </div>
+              </Container>
+            </div>
+            {useFixedPosition ? (
               <div
-                className={cn(
-                  sectionPaddingClasses({ padding: "minimal" }),
-                  "flex min-w-0 items-center justify-center gap-4",
-                )}
-              >
-                <OpenChecklistButton
-                  size="sm"
-                  className="hidden shrink-0 wide:inline-flex"
-                >
-                  {CHECKLIST_STICKY_LABEL}
-                </OpenChecklistButton>
-                <OpenChecklistButton
-                  size="xs"
-                  aria-label={CHECKLIST_STICKY_LABEL}
-                  className="w-full min-w-0 shrink wide:hidden"
-                >
-                  {CHECKLIST_STICKY_LABEL}
-                </OpenChecklistButton>
-              </div>
-            </Container>
+                aria-hidden="true"
+                className="h-[env(safe-area-inset-bottom)]"
+              />
+            ) : null}
           </div>
         </div>
       ) : null}
