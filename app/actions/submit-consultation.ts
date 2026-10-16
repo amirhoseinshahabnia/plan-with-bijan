@@ -95,7 +95,9 @@ export async function submitConsultation(
 
   if (
     situations.length === 0 ||
-    situations.some((situation) => !hasValidOption(situation, SITUATION_OPTIONS))
+    situations.some(
+      (situation) => !hasValidOption(situation, SITUATION_OPTIONS),
+    )
   ) {
     return {
       ok: false,
@@ -133,6 +135,22 @@ export async function submitConsultation(
   if (!webhookUrl) {
     return { ok: false, error: FALLBACK_ERROR };
   }
+
+  console.log("[submit-consulation] action request body:", {
+    status,
+    fullName,
+    email,
+    phone,
+    californiaResident: labelForOption(
+      CALIFORNIA_RESIDENT_OPTIONS,
+      input.californiaResident,
+    ),
+    situation: labelsForOptions(SITUATION_OPTIONS, situations).join(", "),
+    estateValue: labelForOption(ESTATE_VALUE_OPTIONS, input.estateValue),
+    hasEstatePlan: labelForOption(HAS_ESTATE_PLAN_OPTIONS, input.hasEstatePlan),
+    prompt,
+    newsletter: Boolean(input.newsletter),
+  });
 
   try {
     const response = await fetch(webhookUrl, {

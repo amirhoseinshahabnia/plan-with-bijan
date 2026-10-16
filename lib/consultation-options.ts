@@ -28,7 +28,8 @@ export const SITUATION_OPTIONS = [
 ] as const;
 
 export const ESTATE_VALUE_OPTIONS = [
-  { value: "under_5m", label: "under $5MM" },
+  { value: "below_1m", label: "below $1MM" },
+  { value: "1m_5m", label: "$1MM - $5MM" },
   { value: "5m_15m", label: "$5MM - $15MM" },
   { value: "15m_30m", label: "$15MM to $30MM" },
   { value: "30m_plus", label: "$30MM+" },
@@ -65,6 +66,7 @@ export type HasEstatePlanValue =
   (typeof HAS_ESTATE_PLAN_OPTIONS)[number]["value"];
 
 const QUALIFYING_ESTATE_VALUES = new Set<EstateValueValue>([
+  "1m_5m",
   "5m_15m",
   "15m_30m",
   "30m_plus",
