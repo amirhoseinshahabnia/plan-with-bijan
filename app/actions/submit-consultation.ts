@@ -17,7 +17,7 @@ import {
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const FALLBACK_ERROR = "Something went wrong. Please try again.";
 
-export type ConsultationStatus = "qualified" | "unqualified";
+export type ConsultationStatus = "Qualified" | "Unqualified";
 
 export type SubmitConsultationInput = {
   fullName: string;
@@ -127,8 +127,8 @@ export async function submitConsultation(
     situations,
     estateValue: input.estateValue,
   })
-    ? "qualified"
-    : "unqualified";
+    ? "Qualified"
+    : "Unqualified";
 
   const webhookUrl = process.env.GHL_CONSULTATION_URL;
 
