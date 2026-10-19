@@ -3,6 +3,7 @@
 import { useState, type FormEvent, type ReactNode } from "react";
 import { submitLead, type LeadSource } from "@/app/actions/submit-lead";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Stack } from "@/components/ui/stack";
@@ -10,6 +11,9 @@ import { Text } from "@/components/ui/text";
 import { cn } from "@/lib/util";
 
 const FALLBACK_ERROR = "Something went wrong. Please try again.";
+
+const NEWSLETTER_LABEL =
+  "Also send me Bijan's weekly newsletter with estate planning tips.";
 
 type LeadCaptureFormProps = {
   source: LeadSource;
@@ -20,6 +24,7 @@ type LeadCaptureFormProps = {
   layout?: "inline" | "stack";
   className?: string;
   autoFocus?: boolean;
+  includeNewsletter?: boolean;
   onSuccess?: () => void;
 };
 
@@ -32,10 +37,12 @@ export function LeadCaptureForm({
   layout = "inline",
   className,
   autoFocus = false,
+  includeNewsletter = false,
   onSuccess,
 }: LeadCaptureFormProps) {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
+  const [newsletter, setNewsletter] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<{
     firstName?: string;
     email?: string;
@@ -51,12 +58,18 @@ export function LeadCaptureForm({
     setIsSubmitting(true);
 
     try {
-      const result = await submitLead({ firstName, email, source });
+      const result = await submitLead({
+        firstName,
+        email,
+        source,
+        ...(includeNewsletter ? { newsletter } : {}),
+      });
 
       if (result.ok) {
         setIsSuccess(true);
         setFirstName("");
         setEmail("");
+        setNewsletter(false);
         onSuccess?.();
         return;
       }
@@ -127,6 +140,16 @@ export function LeadCaptureForm({
               required
             />
           </Field>
+          {includeNewsletter ? (
+            <Checkbox
+              id={`${idPrefix}-newsletter`}
+              name="newsletter"
+              checked={newsletter}
+              onChange={(event) => setNewsletter(event.target.checked)}
+              disabled={isSubmitting}
+              label={NEWSLETTER_LABEL}
+            />
+          ) : null}
           <Button
             type="submit"
             size="md"

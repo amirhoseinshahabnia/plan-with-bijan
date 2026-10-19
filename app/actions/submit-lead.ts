@@ -8,6 +8,7 @@ export type SubmitLeadInput = {
   firstName: string;
   email: string;
   source: LeadSource;
+  newsletter?: boolean;
 };
 
 export type SubmitLeadResult =
@@ -23,6 +24,7 @@ export async function submitLead({
   firstName,
   email,
   source,
+  newsletter,
 }: SubmitLeadInput): Promise<SubmitLeadResult> {
   const trimmedName = firstName.trim();
   const trimmedEmail = email.trim();
@@ -59,6 +61,9 @@ export async function submitLead({
         firstName: trimmedName,
         email: trimmedEmail,
         source,
+        ...(newsletter === undefined
+          ? {}
+          : { newsletter: Boolean(newsletter) }),
       }),
     });
 

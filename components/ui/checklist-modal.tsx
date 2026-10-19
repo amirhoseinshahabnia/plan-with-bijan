@@ -69,6 +69,7 @@ export function ChecklistModal({ open, onClose }: ChecklistModalProps) {
             submitLabel="Get the checklist"
             submittingLabel="Sending…"
             layout="stack"
+            includeNewsletter
             success={null}
             onSuccess={() => setIsSuccess(true)}
           />
